@@ -1,0 +1,27 @@
+@import "../../../../styles/general/colors.scss";
+
+.intro-wrapper {
+  padding: 10rem 2.5rem;
+  height: 100vh;
+  background: url("../../../../assets/bg-intro.png");
+
+  p,
+  h4 {
+    color: $white-col;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .iqos-logo {
+    margin: 0 10%;
+  }
+
+  .form-group_select {
+    width: 35rem;
+    margin: 0 auto;
+  }
+
+  .text-6_regular {
+    margin-top: 5vh;
+  }
+}

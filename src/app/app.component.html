@@ -1,1 +1,7 @@
-<h1 class="text-1_semibold"> Hello </h1>
+<div *ngIf="isUserNotMinor; else userIsMinor">
+  <app-authentication> </app-authentication>
+</div>
+
+<ng-template #userIsMinor class="user-is-minor">
+  <app-age-check> </app-age-check>
+</ng-template>

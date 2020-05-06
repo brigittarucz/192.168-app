@@ -1,0 +1,29 @@
+@import "../../../../styles/general/colors.scss";
+
+.authentication-wrapper {
+  padding: 10rem 2.5rem;
+  height: 100vh;
+  background: url("../../../../assets/bg-login.png");
+  background-position: cover;
+
+  .iqos-logo {
+    margin: 0 10%;
+  }
+
+  .authentication-options {
+    color: $beigeshade0-col;
+
+    * {
+      border-bottom: 1px solid $beigeshade0-col;
+      width: 45%;
+      margin: 3rem 2.5%;
+      text-align: center;
+      display: inline-block;
+      opacity: 0.3;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  }
+}

@@ -1,8 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "./general/mixins.scss";
-@import "./general/base.scss";
 @import "./general/colors.scss";
 @import "./general/typography.scss";
+@import "./general/base.scss";
 
 // Safari != Chrome on iPhone
+
+// Overwriting mat select
+form {
+  .mat-select {
+    background-color: $blueshade1-col;
+    color: $white-col;
+    font-family: "NotoSans Bold";
+    font-size: 1.6rem;
+    letter-spacing: 0.75px;
+    width: 100px;
+    border: 1px solid $greyshade2-col;
+    padding: 8px 20px;
+    background: url("../assets/icons/downarrow-icon.png") no-repeat 90% $blueshade1-col;
+    margin: 0.75rem;
+
+    .mat-select-placeholder,
+    .mat-select-value-text {
+      color: white;
+    }
+
+    .mat-select-arrow {
+      opacity: 0;
+    }
+
+    .mat-select-panel {
+      border-radius: 0;
+      background-color: $greyshade1-col;
+    }
+  }
+}
