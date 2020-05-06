@@ -1,1 +1,51 @@
-<p>signup works!</p>
+<form class="signup-form padding-xl">
+  <h4 class="text-5_regular margin-medium"> Personal Information </h4>
+  <div class="personal-info">
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="name">Name</label> <br>
+      <input class="basic-input text-5_regular" placeholder="Anna Black" type="text" id="name" name="name">
+    </div>
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="email">Email</label> <br>
+      <input class="basic-input text-5_regular" placeholder="iqos.register@yahoo.com" type="email" id="email"
+        name="email">
+      <span class="error text-6_regular"> Incorrect email </span>
+    </div>
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="birthdate">Birthdate</label> <br>
+      <input class="basic-input text-5_regular" value="2018-07-22" min="2016-01-01" max="2018-12-31" type="date"
+        id="birthdate" name="birthdate">
+      <span class="error text-6_regular"> Incorrect birthdate </span>
+    </div>
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="phone">Phone Number</label> <br>
+      <input class="basic-input text-5_regular" placeholder="+45 32431002" type="tel" id="phone" name="phone">
+      <span class="error text-6_regular"> Incorrect phone number</span>
+    </div>
+  </div>
+  <h4 class="text-5_regular margin-medium"> Address </h4>
+  <div class="address-info">
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="street">Street name & no.</label> <br>
+      <input class="basic-input text-5_regular" placeholder="Adelgade 2" type="text" id="street" name="street">
+    </div>
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="postalcode">Postal Code</label> <br>
+      <input class="basic-input text-5_regular" placeholder="2000" type="number" id="postalcode" name="postalcode">
+    </div>
+  </div>
+  <h4 class="text-5_regular margin-medium"> Password </h4>
+  <div class="password-info">
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="password">Password</label> <br>
+      <input class="basic-input text-5_regular" placeholder="Password" type="password" id="password" name="password">
+    </div>
+    <div class="form-group">
+      <label class="basic-label text-6_regular" for="repeatpassword">Repeat Password</label> <br>
+      <input class="basic-input text-5_regular" placeholder="Repeat password" type="password" id="repeatpassword"
+        name="repeatpassword">
+    </div>
+  </div>
+
+  <button type="submit" class="btn-dark">SIGN UP</button>
+</form>

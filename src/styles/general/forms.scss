@@ -2,11 +2,12 @@ form {
 
   .form-group {
     position: relative;
-    margin: 1.5rem auto;
+    height: 8rem;
+    // margin: 1.5rem 0;
 
-    &:last-of-type {
-      margin-bottom: 8rem;
-    }
+    // &:last-of-type {
+    //   margin-bottom: 3rem;
+    // }
   }
 
   .basic-label {
@@ -35,22 +36,25 @@ form {
   }
 
   .basic-input {
+    height: 42px;
     box-sizing: border-box;
     width: 100%;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid $white-col;
-    padding: 1rem 4rem;
+    padding: 1rem 0.25rem;
     color: $white-col;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
 
     &::placeholder {
       color: $white-col;
+      opacity: 0.85;
     }
   }
 
   .error {
+    visibility: hidden;
     float: right;
     color: $pink-col;
   }
