@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 54.75%;
+
+  @include iphone {
+    font-size: 55.75%;
+  }
+
+}

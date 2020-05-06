@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "NotoSans Bold";
+  src: url("../assets/fonts/NotoSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans Semibold";
+  src: url("../assets/fonts/NotoSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans Medium";
+  src: url("../assets/fonts/NotoSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans Regular";
+  src: url("../assets/fonts/NotoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NotoSans Light";
+  src: url("../assets/fonts/NotoSans-Light.ttf");
+}
+
+
+.text-1_bold {
+  font-family: "NotoSans Bold";
+  font-size: 7.6rem;
+}
+
+.text-2_bold {
+  font-family: "NotoSans Bold";
+  font-size: 2.2rem;
+}
+
+.text-2_medium {
+  font-family: "NotoSans Medium";
+  font-size: 2.2rem;
+}
+
+.text-3_bold {
+  font-family: "NotoSansn Bold";
+  font-size: 2rem;
+}
+
+.text-4_regular {
+  font-family: "NotoSans Regular";
+  font-size: 1.8rem;
+}
+
+.text-5_semibold {
+  font-family: "NotoSans Semibold";
+  font-size: 1.6rem;
+}
+
+.text-5_medium {
+  font-family: "NotoSans Medium";
+  font-size: 1.6rem;
+}
+
+// Form label
+
+.text-6_regular {
+  font-family: "NotoSans Regular";
+  font-size: 1.4rem;
+}
+
+// Button text black
+
+.text-5_bold {
+  font-family: "NotoSans Bold";
+  font-size: 1.6rem;
+}

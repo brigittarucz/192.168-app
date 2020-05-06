@@ -1,0 +1,11 @@
+@mixin iphone {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+// @mixin android {
+//   @media (min-width: 360px) {
+//     @content;
+//   }
+// }
