@@ -4,10 +4,14 @@
 @import "./general/colors.scss";
 @import "./general/typography.scss";
 @import "./general/base.scss";
+@import "./general/forms.scss";
+@import "./general/layout.scss";
+@import "./general/buttons.scss";
 
 // Safari != Chrome on iPhone
 
 // Overwriting mat select
+
 form {
   .mat-select {
     background-color: $blueshade1-col;

@@ -1,0 +1,57 @@
+form {
+
+  .form-group {
+    position: relative;
+    margin: 1.5rem auto;
+
+    &:last-of-type {
+      margin-bottom: 8rem;
+    }
+  }
+
+  .basic-label {
+    color: $pinegreenshade1-col;
+    text-transform: uppercase;
+  }
+
+  .form-icon-email {
+    width: $icon-size;
+    height: $icon-size;
+    position: absolute;
+    background: url("../assets/icons/email-icon.png");
+    background-size: contain;
+    top: 30px;
+    left: 5px;
+  }
+
+  .form-icon-password {
+    width: $icon-size;
+    height: $icon-size;
+    position: absolute;
+    background: url("../assets/icons/password-icon.png");
+    background-size: contain;
+    top: 30px;
+    left: 5px;
+  }
+
+  .basic-input {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $white-col;
+    padding: 1rem 4rem;
+    color: $white-col;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+
+    &::placeholder {
+      color: $white-col;
+    }
+  }
+
+  .error {
+    float: right;
+    color: $pink-col;
+  }
+}

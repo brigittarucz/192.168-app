@@ -1,0 +1,29 @@
+.btn-dark {
+  background-color: $blueshade1-col;
+  color: $greyshade1-col;
+  text-transform: uppercase;
+  font-family: "NotoSans Bold";
+  font-size: 1.4rem;
+  letter-spacing: 0.75px;
+  width: 100px;
+  border: 1px solid $greyshade2-col;
+  padding: 8px 18px;
+  display: inherit;
+  margin: 0.75rem auto;
+
+  &::after {
+    content: "";
+    margin-left: 10px;
+    display: inline-block;
+    height: 16px;
+    width: 20px;
+    background: url("../assets/icons/btn-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 2px;
+  }
+}
+
+.basic-link {
+  color: $white-col;
+}
