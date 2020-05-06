@@ -1,7 +1,6 @@
 @import "../../../../styles/general/colors.scss";
 
 .authentication-wrapper {
-  padding: 10rem 2.5rem;
   height: 100vh;
   background: url("../../../../assets/bg-login.png");
   background-position: cover;
@@ -12,14 +11,20 @@
 
   .authentication-options {
     color: $beigeshade0-col;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 
     * {
       border-bottom: 1px solid $beigeshade0-col;
-      width: 45%;
-      margin: 3rem 2.5%;
+      width: 50%;
       text-align: center;
       display: inline-block;
       opacity: 0.3;
+    }
+
+    &_login {
+      margin-right: 2rem;
     }
 
     .active {

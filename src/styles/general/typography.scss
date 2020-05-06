@@ -69,6 +69,11 @@
   font-size: 2.2rem;
 }
 
+.text-5_bold {
+  font-family: "NotoSans Bold";
+  font-size: 1.8rem;
+}
+
 .text-5_semibold {
   font-family: "NotoSans Semibold";
   font-size: 1.8rem;
@@ -79,16 +84,19 @@
   font-size: 1.8rem;
 }
 
-// Form label
+.text-5_regular {
+  font-family: "NotoSans Regular";
+  font-size: 1.8rem;
+}
 
 .text-6_regular {
   font-family: "NotoSans Regular";
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+}
+
+.text-6_semibold {
+  font-family: "NotoSans Semibold";
+  font-size: 1.5rem;
 }
 
 // Button text black
-
-.text-5_bold {
-  font-family: "NotoSans Bold";
-  font-size: 1.6rem;
-}
