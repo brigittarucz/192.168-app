@@ -11,7 +11,7 @@
     <span class="error text-6_regular"> Incorrect password </span>
   </div>
 
-  <button type="submit" class="btn-dark">LOG IN</button>
+  <button type="submit" class="btn-dark" routerLink="/intro-tour" (click)="changeAuthStatus()">LOG IN</button>
 
   <p class="forgot-password text-6_semibold margin-large">FORGOT PASSWORD?</p>
 </form>
@@ -19,4 +19,4 @@
 
 
 <p class="forgot-password text-6_regular">Don't have an account yet? You can just
-  <a href="#" class="basic-link"><b>continue as a guest</b></a></p>
+  <a routerLink="/intro-tour" class="basic-link" (click)="changeGuestStatus()"><b>continue as a guest</b></a></p>

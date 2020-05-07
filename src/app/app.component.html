@@ -1,5 +1,8 @@
 <div *ngIf="isUserNotMinor; else userIsMinor">
-  <app-authentication> </app-authentication>
+  <app-authentication *ngIf="!isUserInApp; else app"> </app-authentication>
+  <ng-template #app>
+    <router-outlet></router-outlet>
+  </ng-template>
 </div>
 
 <ng-template #userIsMinor class="user-is-minor">

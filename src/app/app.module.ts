@@ -8,9 +8,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthenticationComponent } from './components/views/authentication/authentication.component';
 import { LoginComponent } from './components/views/authentication/login/login.component';
 import { SignupComponent } from './components/views/authentication/signup/signup.component';
+import { TourComponent } from './components/views/tour/tour.component';
+import { NavbarComponent } from './components/ui-components/navbar/navbar.component';
 
 @NgModule({
-	declarations: [ AppComponent, AgeCheckComponent, AuthenticationComponent, LoginComponent, SignupComponent ],
+	declarations: [
+		AppComponent,
+		AgeCheckComponent,
+		AuthenticationComponent,
+		LoginComponent,
+		SignupComponent,
+		TourComponent,
+		NavbarComponent
+	],
 	imports: [ BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSelectModule ],
 	providers: [],
 	bootstrap: [ AppComponent ]
