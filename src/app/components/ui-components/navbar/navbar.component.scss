@@ -1,5 +1,34 @@
 nav {
-  background: url("../../../../assets/bg-menu-1.png");
+  background: url("../../../../assets/bg-el.png");
   background-position: center;
   background-size: cover;
+  color: white;
+
+  .nav {
+    &__top {
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+
+      * {
+        margin: 10px auto;
+      }
+    }
+
+    &__bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+
+      .text-4_medium {
+        border-bottom: 3px solid white;
+        opacity: 30%;
+        padding-bottom: 10px;
+        padding-top: 5px;
+      }
+
+      .active {
+        opacity: 1;
+      }
+    }
+  }
 }
