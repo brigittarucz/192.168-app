@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSelectModule } from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,18 @@ import { SignupComponent } from './components/views/authentication/signup/signup
 import { TourComponent } from './components/views/tour/tour.component';
 import { NavbarComponent } from './components/ui-components/navbar/navbar.component';
 
+// Hammer library import
+
+import * as Hammer from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { DashboardComponent } from './components/views/dashboard/dashboard.component';
+
+export class MyHammerConfig extends HammerGestureConfig {
+	overrides = <any>{
+		swipe: { direction: Hammer.DIRECTION_ALL }
+	};
+}
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -19,10 +31,16 @@ import { NavbarComponent } from './components/ui-components/navbar/navbar.compon
 		LoginComponent,
 		SignupComponent,
 		TourComponent,
-		NavbarComponent
+		NavbarComponent,
+		DashboardComponent
 	],
-	imports: [ BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSelectModule ],
-	providers: [],
+	imports: [ BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSelectModule, HammerModule ],
+	providers: [
+		{
+			provide: HAMMER_GESTURE_CONFIG,
+			useClass: MyHammerConfig
+		}
+	],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}

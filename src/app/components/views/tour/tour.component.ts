@@ -9,4 +9,8 @@ export class TourComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {}
+
+	onSwipeLeft(ev) {
+		console.log(ev.target);
+	}
 }

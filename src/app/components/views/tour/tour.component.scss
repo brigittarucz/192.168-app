@@ -1,16 +1,50 @@
 @import "../../../../styles/general/colors.scss";
 
-// @keyframes translatenow {
-//   to {
-//     transform: translate(100px, 200px);
-//   }
-// }
+@keyframes swipeLeft {
+  from {
+    transform: translate(100vw);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes swipeRight {
+  from {
+    transform: translate(-100vw);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+// animation: swipeLeft 2s 1;
+// background: url("../../../../assets/tour-1.png");
+.layout-tour-1 {
+  background: url("../../../../assets/tour-1.png");
+  position: absolute;
+  width: 100%;
+
+}
+
+.layout-tour-2 {
+  background: url("../../../../assets/tour-2.png");
+  position: absolute;
+  width: 100%;
+}
+
+.layout-tour-3 {
+  background: url("../../../../assets/tour-3.png");
+  position: absolute;
+  width: 100%;
+}
 
 .layout-tour {
-  animation: translatenow 2s infinite;
-  background: url("../../../../assets/tour-1.png");
   height: 100vh;
   position: relative;
+  background-size: contain;
 
   .tour-container {
     padding: 2rem 0;
@@ -33,6 +67,7 @@
 .tour-information {
   position: absolute;
   bottom: 2rem;
+  margin-right: 2rem;
 
   .tour-tracker {
     .text-1_bold {
