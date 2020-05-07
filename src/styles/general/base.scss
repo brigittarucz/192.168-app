@@ -14,18 +14,3 @@ html {
     font-size: 55.75%;
   }
 }
-
-.down-arrow {
-  padding: 0 2px;
-
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    background: url("../assets/icons/downarrow-icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center 2px;
-  }
-}

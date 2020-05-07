@@ -1,12 +1,10 @@
-@import "../../../../styles/general/colors.scss";
-
 .intro-wrapper {
   height: 100vh;
   background: url("../../../../assets/bg-intro.png");
+  color: white;
 
   p,
   h4 {
-    color: $white-col;
     text-align: center;
   }
 
@@ -21,5 +19,20 @@
 
   .text-6_regular {
     margin-top: 5vh;
+  }
+
+  .down-arrow {
+    padding: 0 2px;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background: url("../../../../assets/icons/downarrow-icon.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center 2px;
+    }
   }
 }

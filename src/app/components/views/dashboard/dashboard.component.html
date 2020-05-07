@@ -1,6 +1,12 @@
-<header>
-  <app-navbar> </app-navbar>
+<div *ngIf="skipTour; else tour">
+  <header>
+    <app-navbar> </app-navbar>
+  </header>
   <main>
     <router-outlet></router-outlet>
   </main>
-</header>
+</div>
+
+<ng-template #tour>
+  <app-tour> </app-tour>
+</ng-template>
