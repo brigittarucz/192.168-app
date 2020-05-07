@@ -18,5 +18,5 @@ export class AppComponent {
 		});
 	}
 	isUserNotMinor: boolean = true;
-	isUserInApp: boolean = false;
+	isUserInApp: boolean = true;
 }

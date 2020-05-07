@@ -1,7 +1,7 @@
 @import "../../../../styles/general/colors.scss";
 
 .authentication-wrapper {
-  height: 100%;
+  min-height: 100vh;
   background: url("../../../../assets/bg-login.png");
   background-position: cover;
 
