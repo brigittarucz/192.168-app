@@ -1,0 +1,141 @@
+@import "../../../../styles/general/colors.scss";
+
+.sidebar {
+
+  &__container {
+    &-top {
+      background: url("../../../../assets/bg-menu-1.png");
+      background-size: cover;
+      padding: 2rem;
+      padding-left: 4rem;
+      color: white;
+      height: 20vh;
+
+      .close-icon {
+        float: right;
+      }
+    }
+
+    &-menu {
+      height: 70vh;
+      padding: 2rem;
+      padding-left: 4rem;
+      background: url("../../../../assets/bg-menu-2.png");
+      position: relative;
+      color: white;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .text-4_regular {
+        color: $pinegreenshade1-col;
+      }
+
+      &_controls {
+        width: 100vw;
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        margin-left: -4rem;
+        position: absolute;
+        bottom: 0;
+        height: 45px;
+
+        button.btn-dark {
+          margin: 0;
+          width: 100%;
+          text-align: center;
+          display: block;
+        }
+
+        // button.btn-dark {
+        //   position: absolute;
+        //   bottom: 0;
+        //   width: 40%;
+        //   margin: 0;
+        //   margin-left: -4rem;
+
+        //   &:nth-last-of-type(2) {
+        //     margin-left: 40%;
+        //   }
+        // }
+      }
+    }
+  }
+
+  &__profile {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 130px) 30px;
+    grid-template-rows: 20px 30px;
+
+    .text-4_regular {
+      grid-column: 2/span 1;
+      grid-row: 2/span 1;
+    }
+
+    .edit-icon {
+      grid-column: 3/span 1;
+      grid-row: 2/span 1;
+    }
+
+    &-image {
+      background: url("../../../../assets/icons/user-icon.png");
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+    }
+  }
+
+}
+
+.menu-icon::before {
+  content: "";
+  display: inline-block;
+  width: $icon-size-menu;
+  height: $icon-size-menu;
+  margin: 5px 10px;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.menu-community::before {
+  background: url("../../../../assets/icons/community-icon.png");
+  background-size: contain;
+  background-position: bottom;
+}
+
+.menu-referral::before {
+  background: url("../../../../assets/icons/referral-icon.png");
+  background-size: contain;
+  background-position: bottom;
+}
+
+.menu-products::before {
+  background: url("../../../../assets/icons/products-icon.png");
+  background-size: contain;
+  background-position: bottom;
+}
+
+.menu-specials::before {
+  background: url("../../../../assets/icons/specialoffers-icon.png");
+  background-size: contain;
+  background-position: bottom;
+}
+
+.menu-myiqos::before {
+  background: url("../../../../assets/icons/myiqos-icon.png");
+  background-size: contain;
+  background-position: bottom;
+}
+
+.menu-customize::before {
+  background: url("../../../../assets/icons/customize-icon.png");
+  background-size: contain;
+  background-position: bottom;
+}
