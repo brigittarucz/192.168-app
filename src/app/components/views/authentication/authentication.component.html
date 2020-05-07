@@ -3,13 +3,15 @@
     <header>
       <img src="../../../../assets/iqos-logo.png" alt="iqos logo" width="80%" class="iqos-logo" />
       <div class="authentication-options margin-large">
-        <p class="text-4_medium authentication-options_login active">LOG IN</p>
-        <p class="text-4_medium authentication-options_signup">SIGN UP</p>
+        <p (click)="displayLoginScreen()"
+          [ngClass]="{'text-4_medium authentication-options_login': true, 'active': isLoginActive}">LOG IN</p>
+        <p (click)="displaySignupScreen()"
+          [ngClass]="{'text-4_medium authentication-options_signup': true, 'active': isSignupActive}">SIGN UP</p>
       </div>
     </header>
     <main>
-      <app-login></app-login>
-      <!-- <app-signup> </app-signup> -->
+      <app-login *ngIf="isLoginActive"></app-login>
+      <app-signup *ngIf="isSignupActive"> </app-signup>
     </main>
   </div>
 </div>
