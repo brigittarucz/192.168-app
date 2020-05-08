@@ -18,7 +18,8 @@
     </ul>
     <p class="text-4_regular margin-small">SHOP</p>
     <ul>
-      <li class="text-5_regular"> <span class="menu-icon menu-products"> </span> Products</li>
+      <li class="text-5_regular"> <span class="menu-icon menu-products"> </span> Products <span
+          class="notification text-6_semibold"> 1 NEW </span></li>
       <li class="text-5_regular"> <span class="menu-icon menu-specials"> </span> Special Offers</li>
     </ul>
     <p class="text-4_regular margin-small">ENHANCE</p>
@@ -26,7 +27,14 @@
       <li class="text-5_regular"> <span class="menu-icon menu-myiqos"> </span> My IQOS</li>
       <li class="text-5_regular"> <span class="menu-icon menu-customize"> </span> Customize</li>
     </ul>
-    <p class="text-4_regular margin-small">NOTIFICATIONS</p>
+    <div class="notifications-switch">
+      <p class="text-4_regular margin-small">NOTIFICATIONS</p>
+      <!-- On/off switch frorm https://proto.io/freebies/onoff/ -->
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch"></label>
+      </div>
+    </div>
 
     <div class="sidebar__container-menu_controls">
       <button type="text" class="btn-dark">Customize </button>

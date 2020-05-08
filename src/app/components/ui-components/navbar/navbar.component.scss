@@ -1,8 +1,11 @@
+@import "../../../../styles/general/colors.scss";
+
 nav {
   background: url("../../../../assets/bg-el.png");
   background-position: center;
   background-size: cover;
   color: white;
+  box-shadow: $light-shadow;
 
   .nav {
     &__top {
