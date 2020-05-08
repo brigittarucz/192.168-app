@@ -1,0 +1,101 @@
+@import "../../../../../styles/general/colors.scss";
+
+.community__coupons {
+  .discount {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 200px;
+    }
+
+    * {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .btn-dark {
+    width: inherit;
+  }
+}
+
+.community__threads {
+
+  article:first-of-type {
+    margin-top: 0;
+  }
+
+  &-thread {
+    width: 95%;
+    background-image: url("../../../../../assets/bg-el.png");
+    border: 1px solid $pinegreenshade4-col;
+    padding: 1.5rem 1rem 2rem 1rem;
+    position: relative;
+    box-shadow: $light-shadow;
+
+    .comment {
+      float: right;
+    }
+
+    .text-6_semibold {
+      color: $pinegreenshade1-col;
+    }
+
+    .btn-dark {
+      width: 60%;
+      position: absolute;
+      margin: 0;
+      margin-left: 12%;
+      box-shadow: $light-shadow;
+    }
+  }
+}
+
+.community__events {
+
+  &-ev {
+    display: grid;
+    grid-template-columns: 25px 1fr 4fr;
+
+    .events {
+      margin: auto 0;
+    }
+
+    .text-6_regular {
+      margin: auto;
+    }
+
+    .img-button {
+      margin-left: 1rem;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid $greyshade2-col;
+      height: 60px;
+
+      .btn-dark {
+        width: 10px;
+        margin: 0;
+        height: 44px;
+        float: right;
+        border-right: 0;
+        border-top: 0;
+
+        &::after {
+          margin-left: -5px;
+        }
+      }
+    }
+
+    .img-button-1 {
+      background-image: url("../../../../../assets/event-ITA.jpg");
+    }
+
+    .img-button-2 {
+      background-image: url("../../../../../assets/event-RUS.jpg")
+    }
+
+    .img-button-3 {
+      background-image: url("../../../../../assets/event-UKR.jpeg");
+    }
+  }
+}

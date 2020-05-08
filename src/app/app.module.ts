@@ -17,6 +17,8 @@ import * as Hammer from 'hammerjs';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { DashboardComponent } from './components/views/dashboard/dashboard.component';
 import { SidebarComponent } from './components/ui-components/sidebar/sidebar.component';
+import { CommunityGeneralComponent } from './components/views/dashboard/community-general/community-general.component';
+import { CommunityReferralComponent } from './components/views/dashboard/community-referral/community-referral.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
 	overrides = <any>{
@@ -34,7 +36,9 @@ export class MyHammerConfig extends HammerGestureConfig {
 		TourComponent,
 		NavbarComponent,
 		DashboardComponent,
-		SidebarComponent
+		SidebarComponent,
+		CommunityGeneralComponent,
+		CommunityReferralComponent
 	],
 	imports: [ BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSelectModule, HammerModule ],
 	providers: [
