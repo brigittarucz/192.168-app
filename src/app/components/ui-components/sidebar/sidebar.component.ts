@@ -12,7 +12,7 @@ export class SidebarComponent implements OnInit {
 
 	ngOnInit(): void {}
 
-	closeSidebar() {
-		this.close.emit('false');
+	closeSidebar(ev) {
+		this.close.emit(ev.target.classList[1]);
 	}
 }

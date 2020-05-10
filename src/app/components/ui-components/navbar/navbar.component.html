@@ -1,13 +1,19 @@
 <nav>
   <div class="nav__top">
     <img src="../../../../assets/icons/menu-icon.png" alt="Menu" width="25" (click)="toggleSidebar()">
-    <h1 class="text-3_bold"> Community </h1>
+    <h1 class="text-3_bold"> {{userNavigation.parent | titlecase }}</h1>
     <img src="../../../../assets/icons/bag-icon.png" alt="Cart" width="25">
   </div>
 
   <div class="nav__bottom">
-    <p class="text-4_medium active" routerLink="general"> General </p>
-    <p class="text-4_medium" routerLink="referral"> Referal </p>
+    <p [ngClass]="{'active': userNavigationSelected === userNavigation.children[0], 'text-4_medium': true}"
+      routerLink="{{userNavigation.children[0]}}" (click)="modifySelected($event)">
+      {{userNavigation.children[0] | titlecase}}
+    </p>
+    <p [ngClass]="{'active': userNavigationSelected === userNavigation.children[1], 'text-4_medium': true}"
+      routerLink="{{userNavigation.children[1]}}" (click)="modifySelected($event)">
+      {{userNavigation.children[1] | titlecase}}
+    </p>
   </div>
 </nav>
 

@@ -17,11 +17,13 @@ const routes: Routes = [
 		component: DashboardComponent,
 		children: [
 			{ path: '', redirectTo: 'general', pathMatch: 'full' },
+			{ path: 'special-offers', redirectTo: 'products', pathMatch: 'full' },
+			{ path: 'customize', redirectTo: 'my-iqos', pathMatch: 'full' },
 			{ path: 'general', component: CommunityGeneralComponent },
 			{ path: 'referral', component: CommunityReferralComponent },
-			{ path: 'shop', component: ShopProductsComponent },
-			{ path: 'view-cart', component: CartViewComponent },
-			{ path: 'enhance-device', component: EnhanceDeviceComponent }
+			{ path: 'products', component: ShopProductsComponent },
+			{ path: 'view', component: CartViewComponent },
+			{ path: 'my-iqos', component: EnhanceDeviceComponent }
 		]
 	}
 ];

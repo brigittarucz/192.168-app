@@ -1,6 +1,6 @@
 <div class="sidebar__container">
   <div class="sidebar__container-top">
-    <img src="../../../../assets/icons/close-icon.png" width="25" alt="Close" class="close-icon"
+    <img src="../../../../assets/icons/close-icon.png" width="25" alt="Close" class="close-icon close"
       (click)="closeSidebar($event)">
     <div class="sidebar__profile margin-large">
       <div class="sidebar__profile-image">
@@ -12,21 +12,27 @@
     </div>
   </div>
   <div class="sidebar__container-menu">
-    <p class="text-4_regular margin-small">CLUB</p>
+    <p class="text-4_regular margin-small">COMMUNITY</p>
     <ul>
-      <li class="text-5_regular"> <span class="menu-icon menu-community"> </span> Community </li>
-      <li class="text-5_regular"> <span class="menu-icon menu-referral"> </span> Referral </li>
+      <li class="text-5_regular general" (click)="closeSidebar($event)"> <span class="menu-icon menu-community">
+        </span> General </li>
+      <li class="text-5_regular referral" (click)="closeSidebar($event)"> <span class="menu-icon menu-referral"> </span>
+        Referral </li>
     </ul>
     <p class="text-4_regular margin-small">SHOP</p>
     <ul>
-      <li class="text-5_regular"> <span class="menu-icon menu-products"> </span> Products <span
-          class="notification text-6_semibold"> 1 NEW </span></li>
-      <li class="text-5_regular"> <span class="menu-icon menu-specials"> </span> Special Offers</li>
+      <li class="text-5_regular products" (click)="closeSidebar($event)"> <span class="menu-icon menu-products"> </span>
+        Products <span class="notification text-6_semibold"> 1 NEW </span></li>
+      <li class="text-5_regular special-offers" (click)="closeSidebar($event)"> <span class="menu-icon menu-specials">
+        </span>
+        Special Offers</li>
     </ul>
     <p class="text-4_regular margin-small">ENHANCE</p>
     <ul>
-      <li class="text-5_regular"> <span class="menu-icon menu-myiqos"> </span> My IQOS</li>
-      <li class="text-5_regular"> <span class="menu-icon menu-customize"> </span> Customize</li>
+      <li class="text-5_regular my-iqos" (click)="closeSidebar($event)"> <span class="menu-icon menu-myiqos"> </span> My
+        IQOS</li>
+      <li class="text-5_regular customize" (click)="closeSidebar($event)"> <span class="menu-icon menu-customize">
+        </span> Customize</li>
     </ul>
     <div class="notifications-switch">
       <p class="text-4_regular margin-small">NOTIFICATIONS</p>
