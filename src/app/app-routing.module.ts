@@ -15,7 +15,14 @@ const routes: Routes = [
 	{
 		path: 'dashboard',
 		component: DashboardComponent,
-		children: [ { path: '', component: EnhanceDeviceComponent, outlet: 'dashboard' } ]
+		children: [
+			{ path: '', redirectTo: 'general', pathMatch: 'full' },
+			{ path: 'general', component: CommunityGeneralComponent },
+			{ path: 'referral', component: CommunityReferralComponent },
+			{ path: 'shop', component: ShopProductsComponent },
+			{ path: 'view-cart', component: CartViewComponent },
+			{ path: 'enhance-device', component: EnhanceDeviceComponent }
+		]
 	}
 ];
 
