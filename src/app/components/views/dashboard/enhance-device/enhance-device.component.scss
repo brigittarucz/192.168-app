@@ -48,3 +48,113 @@ section {
     height: 20px;
   }
 }
+
+// On/off switch frorm https://proto.io/freebies/onoff/
+
+.onoffswitch-restraint {
+  position: relative;
+  width: 52px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  float: right;
+  margin-top: 1rem;
+}
+
+.onoffswitch-restraint-checkbox {
+  display: none;
+}
+
+.onoffswitch-restraint-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 18px;
+  padding: 0;
+  line-height: 20px;
+  border: 0px solid #FFFFFF;
+  border-radius: 28px;
+  background-color: #989898;
+  border: 1px solid $greyshade2-col;
+}
+
+.onoffswitch-restraint-label:before {
+  content: "";
+  display: block;
+  width: 27px;
+  margin: -4px;
+  background: #D2CAC7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 32px;
+  border-radius: 30px;
+}
+
+.onoffswitch-restraint-checkbox:checked+.onoffswitch-restraint-label {
+  background-color: #20202B;
+}
+
+.onoffswitch-restraint-checkbox:checked+.onoffswitch-restraint-label .onoffswitch-restraint-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-restraint-checkbox:checked+.onoffswitch-restraint-label:before {
+  right: 0px;
+  background-color: #D2AA9D;
+  box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.onoffswitch-battery {
+  position: relative;
+  width: 52px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  float: right;
+  margin-top: 1rem;
+}
+
+.onoffswitch-battery-checkbox {
+  display: none;
+}
+
+.onoffswitch-battery-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 18px;
+  padding: 0;
+  line-height: 20px;
+  border: 0px solid #FFFFFF;
+  border-radius: 28px;
+  background-color: #989898;
+  border: 1px solid $greyshade2-col;
+}
+
+.onoffswitch-battery-label:before {
+  content: "";
+  display: block;
+  width: 27px;
+  margin: -4px;
+  background: #D2CAC7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 32px;
+  border-radius: 30px;
+}
+
+.onoffswitch-battery-checkbox:checked+.onoffswitch-battery-label {
+  background-color: #20202B;
+}
+
+.onoffswitch-battery-checkbox:checked+.onoffswitch-battery-label .onoffswitch-battery-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-battery-checkbox:checked+.onoffswitch-battery-label:before {
+  right: 0px;
+  background-color: #D2AA9D;
+  box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}

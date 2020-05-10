@@ -36,6 +36,11 @@ export class NavbarComponent implements OnInit {
 		console.log(clicked);
 	}
 
+	navigateToCart() {
+		this.userNavigationSelected = 'view';
+		this.userNavigation = this.navigationTree[3];
+	}
+
 	toggleSidebar() {
 		this.isSidebarOpen = !this.isSidebarOpen;
 	}
