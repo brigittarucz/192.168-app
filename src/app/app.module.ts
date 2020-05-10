@@ -23,6 +23,7 @@ import { ShopProductsComponent } from './components/views/dashboard/shop-product
 import { ShopSpecialsComponent } from './components/views/dashboard/shop-specials/shop-specials.component';
 import { CartViewComponent } from './components/views/dashboard/cart-view/cart-view.component';
 import { CartCheckoutComponent } from './components/views/dashboard/cart-checkout/cart-checkout.component';
+import { EnhanceDeviceComponent } from './components/views/dashboard/enhance-device/enhance-device.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
 	overrides = <any>{
@@ -46,7 +47,8 @@ export class MyHammerConfig extends HammerGestureConfig {
 		ShopProductsComponent,
 		ShopSpecialsComponent,
 		CartViewComponent,
-		CartCheckoutComponent
+		CartCheckoutComponent,
+		EnhanceDeviceComponent
 	],
 	imports: [
 		BrowserModule,

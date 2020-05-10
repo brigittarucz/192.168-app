@@ -29,8 +29,12 @@ section {
   }
 
   .cart-product-container {
-    img {
-      width: 120px;
+    .image-container {
+      width: 140px;
+      background-image: url("../../../../../assets/item-placeholder.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .product-information * {

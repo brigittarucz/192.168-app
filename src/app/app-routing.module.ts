@@ -7,6 +7,7 @@ import { CommunityGeneralComponent } from './components/views/dashboard/communit
 import { CommunityReferralComponent } from './components/views/dashboard/community-referral/community-referral.component';
 import { ShopProductsComponent } from './components/views/dashboard/shop-products/shop-products.component';
 import { CartViewComponent } from './components/views/dashboard/cart-view/cart-view.component';
+import { EnhanceDeviceComponent } from './components/views/dashboard/enhance-device/enhance-device.component';
 
 const routes: Routes = [
 	{ path: '', component: AuthenticationComponent },
@@ -14,7 +15,7 @@ const routes: Routes = [
 	{
 		path: 'dashboard',
 		component: DashboardComponent,
-		children: [ { path: '', component: CartViewComponent, outlet: 'dashboard' } ]
+		children: [ { path: '', component: EnhanceDeviceComponent, outlet: 'dashboard' } ]
 	}
 ];
 
