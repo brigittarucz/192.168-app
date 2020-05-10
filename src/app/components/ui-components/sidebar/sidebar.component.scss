@@ -1,7 +1,23 @@
 @import "../../../../styles/general/colors.scss";
 
+@keyframes sidebarAnimation {
+  from {
+    transform: translateX(-80vw);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .sidebar {
+
   &__container {
+    animation: sidebarAnimation 0.5s forwards;
+    z-index: 6;
+    position: fixed;
     width: 80vw;
     box-shadow: $dark-shadow;
 

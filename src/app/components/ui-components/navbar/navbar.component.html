@@ -1,6 +1,6 @@
 <nav>
   <div class="nav__top">
-    <img src="../../../../assets/icons/menu-icon.png" alt="Menu" width="25">
+    <img src="../../../../assets/icons/menu-icon.png" alt="Menu" width="25" (click)="toggleSidebar()">
     <h1 class="text-3_bold"> Community </h1>
     <img src="../../../../assets/icons/bag-icon.png" alt="Cart" width="25">
   </div>
@@ -11,6 +11,6 @@
   </div>
 </nav>
 
-<aside style="display: none;">
-  <app-sidebar></app-sidebar>
+<aside [ngStyle]="{'display': isSidebarOpen ? 'block' : 'none'}">
+  <app-sidebar (close)='closeSidebar($event)'></app-sidebar>
 </aside>
