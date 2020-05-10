@@ -1,1 +1,110 @@
-<p>cart-view works!</p>
+<section class="section__view-cart">
+  <h3 class="text-4_regular"> Added items to your cart </h3>
+  <article class="cart-product-container margin-medium">
+    <img src="../../../../../assets/item-placeholder.png" alt="Item">
+    <div class="product-information">
+      <h4 class="text-4_regular"> HEETS Tobacco Flavor Collection </h4>
+      <h5 class="text-5_regular"> 105.00 kr </h5>
+      <p class="text-6_regular"> 3 packs of 20 tobacco sticks.</p>
+    </div>
+    <div class="product-control">
+      <button type="button" class="btn-light btn-light-quantity">1</button>
+    </div>
+  </article>
+  <article class="cart-product-container margin-medium">
+    <img src="../../../../../assets/item-placeholder.png" alt="Item">
+    <div class="product-information">
+      <h4 class="text-4_regular"> HEETS Tobacco Flavor Collection </h4>
+      <h5 class="text-5_regular"> 105.00 kr </h5>
+      <p class="text-6_regular"> 3 packs of 20 tobacco sticks.</p>
+    </div>
+    <div class="product-control">
+      <button type="button" class="btn-light btn-light-quantity">1</button>
+    </div>
+  </article>
+</section>
+
+<section class="section__price">
+  <article class="section__price-container">
+    <p class="text-6_medium subtotal"> Subtotal <span class="price price-subtotal"> 105.00 kr</span></p>
+    <p class="text-6_medium total"> Total <span class="price price-total"> 105.00 kr</span></p>
+    <button type="button" class="btn-light"> Checkout </button>
+  </article>
+</section>
+
+<section class="section__discount-code">
+  <article class="section__discount-code-container">
+    <div class="flex-display">
+      <p class="text-6_medium"> I have received a discount code </p>
+      <button type="button" class="btn-light btn-light-more">+</button>
+    </div>
+  </article>
+</section>
+
+<section class="section__discount-referral">
+  <article class="section__discount-referral-container-close">
+    <div class="flex-display">
+      <p class="text-6_medium"> I have received a referral discount <span class="text-6_semibold ad"> NEW </span> </p>
+      <button type="button" class="btn-light btn-light-more">+</button>
+    </div>
+  </article>
+  <article class="section__discount-referral-container-open">
+    <div class="flex-display">
+      <p class="text-6_medium"> Select your discounts and click ok </p>
+      <button type="button" class="btn-light btn-light-more">-</button>
+    </div>
+
+    <div class="discounts-container margin-large">
+      <div class="discount discount-10">
+        <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+        <p class="text-2_bold">10%</p>
+        <button type="button" class="btn-light btn-light-quantity">2</button>
+      </div>
+      <div class="discount discount-5">
+        <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+        <p class="text-2_bold">5%</p>
+        <button type="button" class="btn-light btn-light-quantity">1</button>
+      </div>
+      <div class="discount discount-2 inactive">
+        <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+        <p class="text-2_bold">2%</p>
+        <button type="button" class="btn-light btn-light-quantity">2</button>
+      </div>
+    </div>
+
+    <button type="button" class="btn-light btn-light-confirm">Ok</button>
+    <p class="text-6_semibold margin-small"> You can't add more than three! </p>
+  </article>
+
+  <article class="section__discount-referral-container-open-nodiscounts">
+    <div class="flex-display">
+      <p class="text-6_medium"> You have no referral discounts yet</p>
+      <button type="button" class="btn-light btn-light-more">-</button>
+    </div>
+
+    <button type="button" class="btn-light btn-light-referral"> Refer a friend </button>
+  </article>
+</section>
+
+<section class="section__manage-delivery">
+  <article class="section__manage-delivery-container-close">
+    <div class="flex-display">
+      <p class="text-6_medium"> Subscribe to delivery </p>
+      <button type="button" class="btn-light btn-light-more">+</button>
+    </div>
+  </article>
+  <article class="section__manage-delivery-container-open">
+    <div class="flex-display">
+      <p class="text-6_medium"> Subscribe to delivery </p>
+      <mat-checkbox> </mat-checkbox>
+    </div>
+
+    <div class="flex-display">
+      <p class="text-6_medium"> I want to subscribe to the purchase of this product. I want this delivered
+        every: </p>
+      <select id="month" class="light-select">
+        <option value="initial"> Month </option>
+      </select>
+    </div>
+  </article>
+</section>

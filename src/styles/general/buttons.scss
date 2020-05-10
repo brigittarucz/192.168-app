@@ -28,3 +28,62 @@
 .basic-link {
   color: $white-col;
 }
+
+.btn-light {
+  color: $black-col;
+  border: 1px solid $greyshade2-col;
+  background-color: white;
+  margin: 1rem 0;
+  padding: 0.25rem 0rem;
+  text-transform: uppercase;
+  font-family: "NotoSans Regular";
+  font-size: 1.4rem;
+  letter-spacing: 0.75px;
+
+  &-quantity {
+    padding: 0.5rem;
+  }
+
+  &-quantity::after {
+    content: "";
+    margin-left: 5px;
+    display: inline-block;
+    height: 16px;
+    width: 20px;
+    background: url("../assets/icons/downarrow-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 2px;
+  }
+
+  &-more {
+    font-size: 2rem;
+    line-height: 1;
+    color: $greyshade5-col;
+    width: 25px;
+    height: 20px;
+  }
+
+  &-confirm {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+  }
+
+}
+
+
+.light-select {
+  color: $black-col;
+  border: 1px solid $greyshade2-col;
+  font-family: "NotoSans Bold";
+  font-size: 1.4rem;
+  letter-spacing: 0.75px;
+  width: 100px;
+  padding: 0.25rem;
+  padding-right: 3rem;
+  padding-left: 1rem;
+  height: 20px;
+  background: url("../assets/icons/downarrow-icon.png") no-repeat 90% white;
+  appearance: none;
+}

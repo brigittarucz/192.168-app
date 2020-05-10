@@ -10,7 +10,7 @@ import { LoginComponent } from './components/views/authentication/login/login.co
 import { SignupComponent } from './components/views/authentication/signup/signup.component';
 import { TourComponent } from './components/views/tour/tour.component';
 import { NavbarComponent } from './components/ui-components/navbar/navbar.component';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 // Hammer library import
 
 import * as Hammer from 'hammerjs';
@@ -48,7 +48,14 @@ export class MyHammerConfig extends HammerGestureConfig {
 		CartViewComponent,
 		CartCheckoutComponent
 	],
-	imports: [ BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSelectModule, HammerModule ],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatSelectModule,
+		HammerModule,
+		MatCheckboxModule
+	],
 	providers: [
 		{
 			provide: HAMMER_GESTURE_CONFIG,

@@ -1,0 +1,151 @@
+@import "../../../../../styles/general/colors.scss";
+
+section {
+  padding: 2rem;
+  background-color: white;
+  color: $black-col;
+}
+
+.flex-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__view-cart {
+  .text-4_regular {
+    font-weight: 100;
+  }
+
+  h3 {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $greyshade1-col;
+  }
+
+  .text-5_regular,
+  .text-6_regular {
+    font-weight: 500;
+    color: $greyshade4-col;
+  }
+
+  .cart-product-container {
+    img {
+      width: 120px;
+    }
+
+    .product-information * {
+      padding: 0.25rem 0;
+    }
+
+    .product-control {
+      align-self: center;
+
+      button {
+        width: 35px;
+      }
+    }
+
+    display: flex;
+    flex-wrap: nowrap;
+
+  }
+}
+
+.section__price {
+  color: $greyshade5-col;
+
+  &-container {
+    padding: 2rem;
+    background-color: $greyshade0-col;
+  }
+
+  .subtotal {
+    border-bottom: 1px solid $greyshade2-col;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    float: right;
+  }
+
+  .btn-light {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.section__discount-code {
+  color: $greyshade5-col;
+
+  &-container {
+    padding: 2rem;
+    background-color: $greyshade0-col;
+  }
+}
+
+.section__discount-referral {
+  color: $greyshade5-col;
+
+  .ad {
+    color: $pink-col;
+    font-weight: 900;
+  }
+
+  &-container-close,
+  &-container-open,
+  &-container-open-nodiscounts {
+    padding: 2rem;
+    background-color: $greyshade0-col;
+  }
+
+  &-container-open-nodiscounts {
+    .btn-light-referral {
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+    }
+  }
+
+  .discounts-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    .discount {
+      width: 60px;
+      background-color: $pinegreenshade0-col;
+      border: 1.5px solid $pinegreenshade2-col;
+      padding: 0.5rem;
+      text-align: center;
+
+      .thick-icon {
+        margin-top: -10px;
+      }
+
+      .text-2_bold {
+        color: $pinegreenshade5-col;
+      }
+    }
+
+    .inactive {
+      opacity: 0.4;
+    }
+
+  }
+
+  .text-6_semibold {
+    color: $pink-col;
+    text-align: center;
+  }
+}
+
+.section__manage-delivery {
+  color: $greyshade5-col;
+
+  &-container-close,
+  &-container-open {
+    padding: 2rem;
+    background-color: $greyshade0-col;
+  }
+}

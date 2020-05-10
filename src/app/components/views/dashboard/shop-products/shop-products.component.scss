@@ -34,7 +34,7 @@ section {
   justify-content: space-between;
 
   .product-container {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     width: 160px;
 
     img {
@@ -51,6 +51,10 @@ section {
       font-weight: 500;
       color: $greyshade4-col;
       padding: 0.25rem;
+    }
+
+    .btn-light {
+      width: 158px;
     }
   }
 }
