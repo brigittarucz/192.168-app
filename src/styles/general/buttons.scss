@@ -10,6 +10,7 @@
   padding: 8px 18px;
   display: inherit;
   margin: 2rem auto;
+  box-shadow: $light-shadow;
 
   &::after {
     content: "";

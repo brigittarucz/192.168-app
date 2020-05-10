@@ -1,0 +1,57 @@
+@import "../../../../../styles/general/colors.scss";
+
+section {
+  padding: 2rem;
+}
+
+.section__referral-container {
+  background-image: url("../../../../../assets/bg-referral.png");
+  background-size: cover;
+  padding: 1.5rem 1rem 2rem 1.5rem;
+
+  .form-group {
+
+    .basic-input {
+      padding: 1rem 4rem;
+    }
+  }
+
+  form {
+    position: relative;
+
+    .form-button {
+      padding: 0;
+    }
+  }
+
+  .btn-dark {
+    width: 60%;
+    position: absolute;
+    margin: 0 13%;
+    bottom: -60px;
+    box-shadow: $light-shadow;
+  }
+
+  .img-store {
+    width: 100%;
+  }
+}
+
+.section__howto {
+  img {
+    width: 145px;
+    padding: 1rem;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .readmore-container {
+
+    .btn-dark {
+      width: inherit;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+}

@@ -19,6 +19,10 @@ import { DashboardComponent } from './components/views/dashboard/dashboard.compo
 import { SidebarComponent } from './components/ui-components/sidebar/sidebar.component';
 import { CommunityGeneralComponent } from './components/views/dashboard/community-general/community-general.component';
 import { CommunityReferralComponent } from './components/views/dashboard/community-referral/community-referral.component';
+import { ShopProductsComponent } from './components/views/dashboard/shop-products/shop-products.component';
+import { ShopSpecialsComponent } from './components/views/dashboard/shop-specials/shop-specials.component';
+import { CartViewComponent } from './components/views/dashboard/cart-view/cart-view.component';
+import { CartCheckoutComponent } from './components/views/dashboard/cart-checkout/cart-checkout.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
 	overrides = <any>{
@@ -38,7 +42,11 @@ export class MyHammerConfig extends HammerGestureConfig {
 		DashboardComponent,
 		SidebarComponent,
 		CommunityGeneralComponent,
-		CommunityReferralComponent
+		CommunityReferralComponent,
+		ShopProductsComponent,
+		ShopSpecialsComponent,
+		CartViewComponent,
+		CartCheckoutComponent
 	],
 	imports: [ BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSelectModule, HammerModule ],
 	providers: [

@@ -1,0 +1,56 @@
+@import "../../../../../styles/general/colors.scss";
+
+section {
+  padding: 2rem;
+  background-color: white;
+}
+
+.section__options {
+
+  .option {
+    margin: 0.5rem;
+  }
+
+  .option-active {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: $blueshade2-col;
+    border-radius: 20px;
+  }
+
+  .option-inactive {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: $greyshade3-col;
+    border-radius: 20px;
+  }
+
+}
+
+
+.section__products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .product-container {
+    margin-top: 0.5rem;
+    width: 160px;
+
+    img {
+      width: 100%;
+    }
+
+    .text-4_regular {
+      color: $black-col;
+      font-weight: 500;
+    }
+
+    .text-5_regular,
+    .text-6_regular {
+      font-weight: 500;
+      color: $greyshade4-col;
+      padding: 0.25rem;
+    }
+  }
+}

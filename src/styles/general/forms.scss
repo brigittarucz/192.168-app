@@ -20,6 +20,16 @@ form {
     left: 5px;
   }
 
+  .form-icon-name {
+    width: $icon-size;
+    height: $icon-size;
+    position: absolute;
+    background: url("../assets/icons/userform-icon.png");
+    background-size: contain;
+    top: 30px;
+    left: 5px;
+  }
+
   .form-icon-password {
     width: $icon-size;
     height: $icon-size;
