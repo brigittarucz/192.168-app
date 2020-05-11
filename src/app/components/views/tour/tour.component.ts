@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-tour',
@@ -9,8 +10,9 @@ export class TourComponent implements OnInit {
 	tours: string[] = [ 'layout-tour-1', 'layout-tour-2', 'layout-tour-3' ];
 	toursSwipedLeft: string;
 	toursSwipedRight: string;
+	toursSwipedUp: string;
 
-	constructor() {}
+	constructor(private router: Router) {}
 
 	ngOnInit(): void {}
 
@@ -38,5 +40,15 @@ export class TourComponent implements OnInit {
 				}
 			}
 		}
+	}
+
+	onSwipeUp(ev) {
+		this.toursSwipedUp = ev.target.classList[2];
+		console.log(this.toursSwipedUp);
+		this.toursSwipedLeft = '0';
+		this.toursSwipedRight = '0';
+		setTimeout(() => {
+			this.router.navigate([ 'dashboard/' + this.toursSwipedUp ]);
+		}, 500);
 	}
 }

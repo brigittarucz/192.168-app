@@ -20,12 +20,33 @@
   }
 }
 
+@keyframes swipeUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes swipeUpTranslated {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+
+  to {
+    transform: translateX(0) translateY(-100vh);
+  }
+}
+
 // animation: swipeLeft 2s 1;
 // background: url("../../../../assets/tour-1.png");
 .layout-tour-1 {
   background: url("../../../../assets/tour-1.png");
   position: absolute;
   width: 100%;
+
 }
 
 .layout-tour-2 {
