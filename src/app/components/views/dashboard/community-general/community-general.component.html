@@ -1,69 +1,79 @@
-<section class="community__coupons">
-  <h2 class="text-4_semibold margin-medium"> Discount coupons (4)</h2>
-  <p class="text-5_regular"> You have no discount coupons at the moment. Start by referring a friend and watch how
-    discounts keep coming in.</p>
-  <article class="discount community__coupons-disc10">
-    <img src="../../../../../assets/discount10.png" alt="disc 10">
-    <p class="text-2_medium"> x 2</p>
-  </article>
-  <article class="discount community__coupons-disc5">
-    <img src="../../../../../assets/discount5.png" alt="disc 5">
-    <p class="text-2_medium"> x 1</p>
-  </article>
-  <article class="discount community__coupons-disc2">
-    <img src="../../../../../assets/discount2.png" alt="disc 2">
-    <p class="text-2_medium"> x 1</p>
-  </article>
-  <button class="btn-dark"> REFER A FRIEND </button>
+<section class="guest__view" *ngIf="isGuestActive; else authView">
+  <p class="text-5_regular"> Please login or signup to view this section.</p>
 </section>
 
-<section class="community__threads">
-  <h2 class="text-4_semibold margin-medium"> Threads (220) </h2>
-  <article class="community__threads-thread margin-xl">
-    <img src="../../../../../assets/icons/comment-icon.png" class="comment margin-small" width="20" alt="comment">
-    <div class="blur-overlay">
-    </div>
-    <p class="text-5_semibold margin-small">IQOS MALFUNCTION HELP</p>
+<ng-template #authView>
+  <section class="community__coupons">
+    <h2 class="text-4_semibold margin-medium"> Discount coupons ({{sum}})</h2>
+    <p class="text-5_regular" *ngIf="sum === 0"> You have no discount coupons at the moment. Start by referring a friend
+      and
+      watch how
+      discounts keep coming in.</p>
+    <article class="discount community__coupons-disc10" *ngIf="discount10 !== 0">
+      <img src="../../../../../assets/discount10.png" alt="disc 10">
+      <p class="text-2_medium"> x {{discount10}}</p>
+    </article>
+    <article class="discount community__coupons-disc5" *ngIf="discount5 !== 0">
+      <img src="../../../../../assets/discount5.png" alt="disc 5">
+      <p class="text-2_medium"> x {{discount5}}</p>
+    </article>
+    <article class="discount community__coupons-disc2" *ngIf="discount2 !== 0">
+      <img src="../../../../../assets/discount2.png" alt="disc 2">
+      <p class="text-2_medium"> x {{discount2}}</p>
+    </article>
+    <button class="btn-dark"> REFER A FRIEND </button>
+  </section>
 
-    <p class="text-6_semibold">Created 26/04/2020 19:54</p>
-    <p class="text-5_regular margin-medium">Vestibulum augue nulla, tempus ac lacus in, condimentum eleifend ligula.</p>
-    <button class="btn-dark"> VIEW FULL THREAD </button>
-  </article>
-  <article class="community__threads-thread margin-xl">
-    <img src="../../../../../assets/icons/comment-icon.png" class="comment margin-small" width="20" alt="comment">
-    <div class="blur-overlay">
-    </div>
-    <p class="text-5_semibold margin-small">IQOS MALFUNCTION HELP</p>
+  <section class="community__threads">
+    <h2 class="text-4_semibold margin-medium"> Threads (220) </h2>
+    <article class="community__threads-thread margin-xl">
+      <img src="../../../../../assets/icons/comment-icon.png" class="comment margin-small" width="20" alt="comment">
+      <div class="blur-overlay">
+      </div>
+      <p class="text-5_semibold margin-small">IQOS MALFUNCTION HELP</p>
 
-    <p class="text-6_semibold">Created 26/04/2020 19:54</p>
-    <p class="text-5_regular margin-medium">Vestibulum augue nulla, tempus ac lacus in, condimentum eleifend ligula.</p>
-    <button class="btn-dark"> VIEW FULL THREAD </button>
-  </article>
-</section>
+      <p class="text-6_semibold">Created 26/04/2020 19:54</p>
+      <p class="text-5_regular margin-medium">Vestibulum augue nulla, tempus ac lacus in, condimentum eleifend ligula.
+      </p>
+      <button class="btn-dark"> VIEW FULL THREAD </button>
+    </article>
+    <article class="community__threads-thread margin-xl">
+      <img src="../../../../../assets/icons/comment-icon.png" class="comment margin-small" width="20" alt="comment">
+      <div class="blur-overlay">
+      </div>
+      <p class="text-5_semibold margin-small">IQOS MALFUNCTION HELP</p>
+
+      <p class="text-6_semibold">Created 26/04/2020 19:54</p>
+      <p class="text-5_regular margin-medium">Vestibulum augue nulla, tempus ac lacus in, condimentum eleifend ligula.
+      </p>
+      <button class="btn-dark"> VIEW FULL THREAD </button>
+    </article>
+  </section>
 
 
-<section class="community__events">
-  <h2 class="text-4_semibold margin-medium"> Events (0) </h2>
-  <p class="text-5_regular"> There are no events in your area but have a look at events further away:</p>
-  <article class="community__events-ev margin-large">
-    <img src="../../../../../assets/icons/events-icon.png" class="events" alt="events" width="20">
-    <p class="text-6_regular"> Italy </p>
-    <div class="img-button img-button-1">
-      <button class="btn-dark"></button>
-    </div>
-  </article>
-  <article class="community__events-ev margin-large">
-    <img src="../../../../../assets/icons/events-icon.png" class="events" alt="events" width="20">
-    <p class="text-6_regular"> Russia </p>
-    <div class="img-button img-button-2">
-      <button class="btn-dark"></button>
-    </div>
-  </article>
-  <article class="community__events-ev margin-large">
-    <img src="../../../../../assets/icons/events-icon.png" class="events" alt="events" width="20">
-    <p class="text-6_regular"> Ukraine </p>
-    <div class="img-button img-button-3">
-      <button class="btn-dark"></button>
-    </div>
-  </article>
-</section>
+  <section class="community__events">
+    <h2 class="text-4_semibold margin-medium"> Events (0) </h2>
+    <p class="text-5_regular"> There are no events in your area but have a look at events further away:</p>
+    <article class="community__events-ev margin-large">
+      <img src="../../../../../assets/icons/events-icon.png" class="events" alt="events" width="20">
+      <p class="text-6_regular"> Italy </p>
+      <div class="img-button img-button-1">
+        <button class="btn-dark"></button>
+      </div>
+    </article>
+    <article class="community__events-ev margin-large">
+      <img src="../../../../../assets/icons/events-icon.png" class="events" alt="events" width="20">
+      <p class="text-6_regular"> Russia </p>
+      <div class="img-button img-button-2">
+        <button class="btn-dark"></button>
+      </div>
+    </article>
+    <article class="community__events-ev margin-large">
+      <img src="../../../../../assets/icons/events-icon.png" class="events" alt="events" width="20">
+      <p class="text-6_regular"> Ukraine </p>
+      <div class="img-button img-button-3">
+        <button class="btn-dark"></button>
+      </div>
+    </article>
+  </section>
+</ng-template>

@@ -1,46 +1,56 @@
-<section class="section__referral">
-  <article class="section__referral-container">
-    <h2 class="text-4_semibold margin-medium"> Refer a friend</h2>
-    <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque lectus.
-    </p>
-    <form class="referral-form margin-large">
-      <div class="form-group">
-        <label class="basic-label text-6_regular" for="name">Full Name</label> <br>
-        <span class="form-icon-name"></span>
-        <input class="basic-input text-5_regular" placeholder="Name" type="text" id="name" name="name">
-      </div>
-      <div class="form-group">
-        <label class="basic-label text-6_regular" for="email">Email</label> <br>
-        <span class="form-icon-email"></span>
-        <input class="basic-input text-5_regular" placeholder="Email" type="email" id="email" name="email">
-      </div>
-
-      <div class="form-button">
-        <button type="submit" class="btn-dark">Send</button>
-      </div>
-    </form>
-  </article>
+<section class="guest__view" *ngIf="isGuestActive; else authView">
+  <p class="text-5_regular"> Please login or signup to view this section.</p>
 </section>
 
-<img src="../../../../../assets/store.jpg" width="100%" alt="Store" class="margin-large img-store">
+<ng-template #authView>
+  <section class="section__referral">
+    <article class="section__referral-container">
+      <h2 class="text-4_semibold margin-medium"> Refer a friend</h2>
+      <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
+        lectus.
+      </p>
+      <form class="referral-form margin-large">
+        <div class="form-group">
+          <span class="form-icon-name"></span>
+          <input class="basic-input text-5_regular" placeholder="Name" type="text" id="name" name="name" required>
+          <label class="basic-label text-6_regular" for="name">Full Name</label>
+        </div>
+        <div class="form-group">
+          <span class="form-icon-email"></span>
+          <input class="basic-input text-5_regular" placeholder="Email" type="email" id="email" name="email" required>
+          <label class="basic-label text-6_regular" for="email">Email</label>
+        </div>
 
-<section class="section__howto">
-  <article class="section__howto-container">
-    <h2 class="text-4_semibold margin-medium"> How it works?</h2>
-    <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque lectus.
-      Maecenas in sagittis enim. Maecenas et ultricies massa, sed dictum lacus. Sed semper fermentum enim ut rhoncus.
-    </p>
-    <div class="readmore-container margin-small">
-      <img src="../../../../../assets/discount10.png" alt="Discount 10">
-      <div>
-        <button type="text" class="btn-dark">Show More</button>
+        <div class="form-button">
+          <button type="submit" class="btn-dark">Send</button>
+        </div>
+      </form>
+    </article>
+  </section>
+
+  <img src="../../../../../assets/store.jpg" width="100%" alt="Store" class="margin-large img-store">
+
+  <section class="section__howto">
+    <article class="section__howto-container">
+      <h2 class="text-4_semibold margin-medium"> How it works?</h2>
+      <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
+        lectus.
+        Maecenas in sagittis enim. Maecenas et ultricies massa, sed dictum lacus. Sed semper fermentum enim ut rhoncus.
+      </p>
+      <div class="readmore-container margin-small">
+        <img src="../../../../../assets/discount10.png" alt="Discount 10">
+        <div>
+          <button type="text" class="btn-dark">Show More</button>
+        </div>
       </div>
-    </div>
-    <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque lectus.
-    </p>
-    <img src="../../../../../assets/discount5.png" alt="Discount 5">
-    <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque lectus.
-    </p>
-    <img src="../../../../../assets/discount2.png" alt="Discount 2">
-  </article>
-</section>
+      <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
+        lectus.
+      </p>
+      <img src="../../../../../assets/discount5.png" alt="Discount 5">
+      <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
+        lectus.
+      </p>
+      <img src="../../../../../assets/discount2.png" alt="Discount 2">
+    </article>
+  </section>
+</ng-template>

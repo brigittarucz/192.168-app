@@ -16,6 +16,9 @@
 
   &__container {
     animation: sidebarAnimation 0.5s forwards;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     z-index: 6;
     position: fixed;
     width: 80vw;
@@ -27,7 +30,7 @@
       padding: 2rem;
       padding-left: 2.5rem;
       color: white;
-      height: 20vh;
+      width: 100%;
 
       .close-icon {
         float: right;
@@ -35,7 +38,7 @@
     }
 
     &-menu {
-      height: 70vh;
+      width: 100%;
       padding: 2rem;
       padding-left: 2.5rem;
       background: url("../../../../assets/bg-menu-2.png");
@@ -57,9 +60,10 @@
         }
       }
 
-      .text-4_regular {
+      .text-5_medium {
         color: $pinegreenshade1-col;
         display: inline-block;
+        letter-spacing: 1px;
       }
 
       &_controls {
@@ -77,6 +81,7 @@
           width: 100%;
           text-align: center;
           display: block;
+          padding: 8px 14px;
 
           &:first-child {
             border-left: 0;
@@ -170,4 +175,66 @@
   background: url("../../../../assets/icons/customize-icon.png");
   background-size: contain;
   background-position: bottom;
+}
+
+.locked::before {
+  background: url("../../../../assets/icons/locked-icon.png");
+  background-size: contain;
+  background-position: bottom;
+}
+
+// On/off switch frorm https://proto.io/freebies/onoff/
+
+.onoffswitch {
+  position: relative;
+  width: 52px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  float: right;
+  margin-top: 1rem;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 18px;
+  padding: 0;
+  line-height: 20px;
+  border: 0px solid #FFFFFF;
+  border-radius: 28px;
+  background-color: #989898;
+  border: 1px solid $greyshade2-col;
+}
+
+.onoffswitch-label:before {
+  content: "";
+  display: block;
+  width: 27px;
+  margin: -4px;
+  background: #D2CAC7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 32px;
+  border-radius: 30px;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label {
+  background-color: #20202B;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label:before {
+  right: 0px;
+  background-color: #D2AA9D;
+  box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
 }

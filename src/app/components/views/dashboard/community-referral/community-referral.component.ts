@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: [ './community-referral.component.scss' ]
 })
 export class CommunityReferralComponent implements OnInit {
+	isGuestActive: boolean = false;
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		if (localStorage.getItem('user') === 'guest') {
+			this.isGuestActive = true;
+		}
+	}
 }

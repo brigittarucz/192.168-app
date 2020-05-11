@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: [ './enhance-device.component.scss' ]
 })
 export class EnhanceDeviceComponent implements OnInit {
+	isGuestActive: boolean = false;
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		if (localStorage.getItem('user') === 'guest') {
+			this.isGuestActive = true;
+		}
+	}
 }

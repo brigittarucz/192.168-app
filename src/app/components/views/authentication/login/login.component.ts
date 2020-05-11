@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
 
 	changeGuestStatus() {
 		this.authService.changeGuestStatus();
+		localStorage.setItem('user', 'guest');
 	}
 
 	onSubmit(form: NgForm) {
@@ -43,6 +44,8 @@ export class LoginComponent implements OnInit {
 						this.isLoading = false;
 						this.errorEmail = false;
 						this.authService.changeAuthStatus();
+						localStorage.setItem('user', 'authenticated');
+						localStorage.setItem('key', user.id);
 						this.router.navigate([ 'dashboard/general' ]);
 						break;
 					}

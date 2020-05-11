@@ -7,19 +7,21 @@
 
       </div>
       <p class="text-6_regular">USER PROFILE</p>
-      <h3 class="text-4_regular">Anna Black</h3>
+      <h3 class="text-4_regular">{{isGuestActive ? 'Guest' : username}}</h3>
       <img src="../../../../assets/icons/edit-icon.png" width="25" alt="Edit" class="edit-icon">
     </div>
   </div>
   <div class="sidebar__container-menu">
-    <p class="text-4_regular margin-small">COMMUNITY</p>
+    <p class="text-5_medium margin-small">COMMUNITY</p>
     <ul>
-      <li class="text-5_regular general" (click)="closeSidebar($event)"> <span class="menu-icon menu-community">
+      <li class="text-5_regular general" (click)="closeSidebar($event)"> <span
+          [ngClass]="isGuestActive === true ? 'menu-icon menu-community locked' : 'menu-icon menu-community'">
         </span> General </li>
-      <li class="text-5_regular referral" (click)="closeSidebar($event)"> <span class="menu-icon menu-referral"> </span>
+      <li class="text-5_regular referral" (click)="closeSidebar($event)"> <span
+          [ngClass]="isGuestActive === true ? 'menu-icon menu-referral locked' : 'menu-icon menu-referral'"> </span>
         Referral </li>
     </ul>
-    <p class="text-4_regular margin-small">SHOP</p>
+    <p class="text-5_medium margin-small">SHOP</p>
     <ul>
       <li class="text-5_regular products" (click)="closeSidebar($event)"> <span class="menu-icon menu-products"> </span>
         Products <span class="notification text-6_semibold"> 1 NEW </span></li>
@@ -27,15 +29,16 @@
         </span>
         Special Offers</li>
     </ul>
-    <p class="text-4_regular margin-small">ENHANCE</p>
+    <p class="text-5_medium margin-small">ENHANCE</p>
     <ul>
-      <li class="text-5_regular my-iqos" (click)="closeSidebar($event)"> <span class="menu-icon menu-myiqos"> </span> My
+      <li class="text-5_regular my-iqos" (click)="closeSidebar($event)"> <span
+          [ngClass]="isGuestActive === true ? 'menu-icon menu-myiqos locked' : 'menu-icon menu-myiqos'"> </span> My
         IQOS</li>
       <li class="text-5_regular customize" (click)="closeSidebar($event)"> <span class="menu-icon menu-customize">
         </span> Customize</li>
     </ul>
     <div class="notifications-switch">
-      <p class="text-4_regular margin-small">NOTIFICATIONS</p>
+      <p class="text-5_medium margin-small">NOTIFICATIONS</p>
       <!-- On/off switch frorm https://proto.io/freebies/onoff/ -->
       <div class="onoffswitch">
         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -46,7 +49,7 @@
 
     <div class="sidebar__container-menu_controls">
       <button type="text" class="btn-dark">Customize </button>
-      <button type="text" class="btn-dark" routerLink="">Sign Out </button>
+      <button type="text" class="btn-dark" routerLink="/">{{isGuestActive ? 'Sign Up' : 'Sign Out'}}</button>
     </div>
   </div>
 </div>

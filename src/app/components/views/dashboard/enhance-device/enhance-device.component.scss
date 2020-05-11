@@ -1,8 +1,12 @@
 @import "../../../../../styles/general/colors.scss";
 
-section {
+section:not(.guest__view) {
   padding: 2rem;
   background-color: white;
+}
+
+.guest__view {
+  padding: 2rem;
 }
 
 .section__device-status {

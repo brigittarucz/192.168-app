@@ -11,7 +11,13 @@ export class AuthenticationComponent implements OnInit {
 
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		if (localStorage.getItem('user') === 'guest') {
+			this.isLoginActive = false;
+			this.isSignupActive = true;
+		}
+		localStorage.removeItem('user');
+	}
 
 	displayLoginScreen() {
 		this.isLoginActive = true;

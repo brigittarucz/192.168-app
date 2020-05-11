@@ -69,7 +69,8 @@ form {
 
 body {
   min-height: 100vh;
-  background-color: black;
+  background: url("../assets/bg-app-green&80op.PNG");
+  background-size: cover;
 }
 
 .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,

@@ -33,7 +33,6 @@ export class NavbarComponent implements OnInit {
 				}
 			});
 		});
-		console.log(clicked);
 	}
 
 	navigateToCart() {
