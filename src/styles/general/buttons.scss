@@ -23,6 +23,11 @@
     background-repeat: no-repeat;
     background-position: center 2px;
   }
+
+  &:disabled {
+    background-color: rgba(60, 60, 65, 0.5);
+    color: $greyshade3-col;
+  }
 }
 
 .basic-link {

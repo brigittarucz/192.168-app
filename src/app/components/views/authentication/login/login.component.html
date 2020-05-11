@@ -1,18 +1,35 @@
-<form class="login-form padding-xl">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="login-form padding-xl">
   <div class="form-group">
     <label class="basic-label text-6_regular" for="email">Email</label> <br>
     <span class="form-icon-email"></span>
-    <input class="basic-input text-5_regular" placeholder="Email" type="email" id="email" name="email">
+    <input class="basic-input text-5_regular" ngModel placeholder="Email" type="email" id="email" name="email" required>
+    <span class="error text-6_regular" [ngStyle]="{'visibility': errorEmail === true ? 'visible' : 'hidden'}"> Incorrect
+      email </span>
   </div>
   <div class="form-group">
     <label class="basic-label text-6_regular" for="password">Password</label> <br>
     <span class="form-icon-password"></span>
-    <input class="basic-input text-5_regular" placeholder="Password" type="password" id="password" name="password">
+    <input class="basic-input text-5_regular" ngModel placeholder="Password" type="password" id="password"
+      name="password" required>
     <span class="error text-6_regular"> Incorrect password </span>
   </div>
 
   <div class="form-button">
-    <button type="submit" class="btn-dark" routerLink="dashboard" (click)="changeAuthStatus()">LOG IN</button>
+    <button type="submit" class="btn-dark" [disabled]="!f.valid">LOG IN </button>
+    <div class="lds-spinner" [ngStyle]="{'visibility': isLoading === true ? 'visible' : 'hidden'}">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 
   <p class="forgot-password text-6_semibold margin-large">FORGOT PASSWORD?</p>

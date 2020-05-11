@@ -24,6 +24,8 @@ import { ShopSpecialsComponent } from './components/views/dashboard/shop-special
 import { CartViewComponent } from './components/views/dashboard/cart-view/cart-view.component';
 import { CartCheckoutComponent } from './components/views/dashboard/cart-checkout/cart-checkout.component';
 import { EnhanceDeviceComponent } from './components/views/dashboard/enhance-device/enhance-device.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 export class MyHammerConfig extends HammerGestureConfig {
 	overrides = <any>{
@@ -56,7 +58,9 @@ export class MyHammerConfig extends HammerGestureConfig {
 		BrowserAnimationsModule,
 		MatSelectModule,
 		HammerModule,
-		MatCheckboxModule
+		MatCheckboxModule,
+		FormsModule,
+		HttpClientModule
 	],
 	providers: [
 		{
