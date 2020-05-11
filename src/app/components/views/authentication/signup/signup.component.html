@@ -1,49 +1,56 @@
-<form class="signup-form padding-xl">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="signup-form padding-xl">
   <h4 class="text-5_regular margin-medium"> Personal Information </h4>
   <div class="personal-info">
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="name">Name</label> <br>
-      <input class="basic-input text-5_regular" placeholder="Anna Black" type="text" id="name" name="name">
+
+      <input class="basic-input text-5_regular" ngModel placeholder="Anna Black" type="text" id="name" name="name"
+        required>
+      <label class="basic-label text-6_regular" for="name">Full Name</label>
     </div>
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="email">Email</label> <br>
-      <input class="basic-input text-5_regular" placeholder="iqos.register@yahoo.com" type="email" id="email"
-        name="email">
-      <span class="error text-6_regular"> Incorrect email </span>
+      <input class="basic-input text-5_regular" ngModel placeholder="iqos.register@yahoo.com" type="email" id="email"
+        name="email" required>
+      <label class="basic-label text-6_regular" for="email">Email</label>
+      <span class="error text-6_regular"> Incorrect
+        email </span>
     </div>
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="birthdate">Birthdate</label> <br>
-      <input class="basic-input text-5_regular" value="2018-07-22" min="2016-01-01" max="2018-12-31" type="date"
-        id="birthdate" name="birthdate">
+      <input class="basic-input text-5_regular" ngModel value="YYYY-MM-DD" min="1920-01-01" max="2002-12-31" type="date"
+        id="birthdate" name="birthdate" required>
+      <label class="basic-label text-6_regular" for="birthdate">Birthdate</label>
       <span class="error text-6_regular"> Incorrect birthdate </span>
     </div>
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="phone">Phone Number</label> <br>
-      <input class="basic-input text-5_regular" placeholder="+45 32431002" type="tel" id="phone" name="phone">
+      <input class="basic-input text-5_regular" ngModel placeholder="+45 32431002" type="tel" id="phone" name="phone"
+        required>
+      <label class="basic-label text-6_regular" for="phone">Phone Number</label>
       <span class="error text-6_regular"> Incorrect phone number</span>
     </div>
   </div>
   <h4 class="text-5_regular margin-medium"> Address </h4>
   <div class="address-info">
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="street">Street name & no.</label> <br>
-      <input class="basic-input text-5_regular" placeholder="Adelgade 2" type="text" id="street" name="street">
+      <input class="basic-input text-5_regular" ngModel placeholder="Adelgade 2" type="text" id="street" name="street"
+        required>
+      <label class="basic-label text-6_regular" for="street">Street name & no.</label>
     </div>
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="postalcode">Postal Code</label> <br>
-      <input class="basic-input text-5_regular" placeholder="2000" type="number" id="postalcode" name="postalcode">
+      <input class="basic-input text-5_regular" ngModel placeholder="2000" type="number" id="postalcode"
+        name="postalcode" required>
+      <label class="basic-label text-6_regular" for="postalcode">Postal Code</label>
     </div>
   </div>
   <h4 class="text-5_regular margin-medium"> Password </h4>
   <div class="password-info">
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="password">Password</label> <br>
-      <input class="basic-input text-5_regular" placeholder="Password" type="password" id="password" name="password">
+      <input class="basic-input text-5_regular" ngModel placeholder="Password" type="password" id="password"
+        name="password" required>
+      <label class="basic-label text-6_regular" for="password">Password</label>
     </div>
     <div class="form-group">
-      <label class="basic-label text-6_regular" for="repeatpassword">Repeat Password</label> <br>
-      <input class="basic-input text-5_regular" placeholder="Repeat password" type="password" id="repeatpassword"
-        name="repeatpassword">
+      <input class="basic-input text-5_regular" ngModel placeholder="Repeat password" type="password"
+        id="repeatpassword" name="repeatpassword" required>
+      <label class="basic-label text-6_regular" for="repeatpassword">Repeat Password</label>
     </div>
   </div>
 

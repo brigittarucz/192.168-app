@@ -2,12 +2,13 @@ form {
 
   .form-group {
     position: relative;
-    height: 8rem;
+    height: 7rem;
   }
 
   .basic-label {
     color: $pinegreenshade1-col;
     text-transform: uppercase;
+    opacity: 0;
   }
 
   .form-icon-email {
@@ -52,9 +53,11 @@ form {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
 
+
     &::placeholder {
       color: $white-col;
-      opacity: 0.85;
+      font-family: "NotoSans Light";
+      opacity: 0.45;
     }
   }
 
@@ -66,5 +69,30 @@ form {
 
   .form-button {
     padding: 1.5rem;
+  }
+}
+
+.basic-input:focus:invalid+.basic-label {
+  position: absolute;
+  left: 0;
+  animation: animationLabel 0.25s forwards;
+}
+
+.basic-input:valid+.basic-label {
+  position: absolute;
+  left: 0;
+  transform: translateX(0) translateY(-10px);
+  opacity: 1;
+}
+
+@keyframes animationLabel {
+  from {
+    transform: scale(0.6) translateX(10px) translateY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateX(0) translateY(-10px);
+    opacity: 1;
   }
 }
