@@ -1,5 +1,6 @@
-<div class="layout-tour-1" (swipeLeft)="onSwipeLeft($event)">
-  <div class="layout-tour">
+<div class="layout-tour-1" (swipeLeft)="onSwipeLeft($event)" (swipeRight)="onSwipeRight($event)"
+  [ngStyle]="{'animation': toursSwipedLeft === tours[0] ? 'swipeLeft 1s forwards' : toursSwipedRight === tours[0] ? 'swipeRight 1s forwards' : 'none'}">
+  <div class="layout-tour tour-1">
     <a routerLink="../dashboard/general" class="skip-tour">
       <img src="../../../../assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
       <span class="text-6_regular"> Skip Tour </span>
@@ -24,8 +25,11 @@
   </div>
 </div>
 
-<div class="layout-tour-2" (swipeLeft)="onSwipeLeft($event)">
-  <div class="layout-tour">
+<div class="layout-tour-2" (swipeLeft)="onSwipeLeft($event)" (swipeRight)="onSwipeRight($event)"
+  [ngStyle]="{'animation': toursSwipedLeft === tours[1] ? 'swipeLeft 1s forwards'
+   : toursSwipedRight === tours[1] ? 'swipeRight 1s forwards' : 'none', 
+   'transform': toursSwipedRight === tours[2] ? 'translateX(0)' : toursSwipedLeft === tours[2] ? 'translateX(0)' : 'translateX(100vw)' }">
+  <div class="layout-tour tour-2">
     <a routerLink="../dashboard/general" class="skip-tour">
       <img src="../../../../assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
       <span class="text-6_regular"> Skip Tour </span>
@@ -50,8 +54,9 @@
   </div>
 </div>
 
-<div class="layout-tour-3" (swipeLeft)="onSwipeLeft($event)">
-  <div class="layout-tour">
+<div class="layout-tour-3" (swipeLeft)="onSwipeLeft($event)" (swipeRight)="onSwipeRight($event)"
+  [ngStyle]="{'animation': toursSwipedLeft === tours[2] ? 'swipeLeft 1s forwards' : toursSwipedRight === tours[2] ? 'swipeRight 1s forwards' : 'none'}">
+  <div class="layout-tour tour-3">
     <a routerLink="../dashboard/general" class="skip-tour">
       <img src="../../../../assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
       <span class="text-6_regular"> Skip Tour </span>

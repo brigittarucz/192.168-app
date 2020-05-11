@@ -12,11 +12,11 @@
 
 @keyframes swipeRight {
   from {
-    transform: translate(-100vw);
+    transform: translate(0);
   }
 
   to {
-    transform: translate(0);
+    transform: translate(100vw);
   }
 }
 
@@ -26,19 +26,20 @@
   background: url("../../../../assets/tour-1.png");
   position: absolute;
   width: 100%;
-
 }
 
 .layout-tour-2 {
   background: url("../../../../assets/tour-2.png");
   position: absolute;
   width: 100%;
+  transform: translateX(100vw);
 }
 
 .layout-tour-3 {
   background: url("../../../../assets/tour-3.png");
   position: absolute;
   width: 100%;
+  transform: translateX(100vw);
 }
 
 .layout-tour {
