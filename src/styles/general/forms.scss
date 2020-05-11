@@ -17,7 +17,7 @@ form {
     position: absolute;
     background: url("../assets/icons/email-icon.png");
     background-size: contain;
-    top: 30px;
+    top: 15px;
     left: 5px;
   }
 
@@ -27,7 +27,7 @@ form {
     position: absolute;
     background: url("../assets/icons/userform-icon.png");
     background-size: contain;
-    top: 30px;
+    top: 15px;
     left: 5px;
   }
 
@@ -37,7 +37,7 @@ form {
     position: absolute;
     background: url("../assets/icons/password-icon.png");
     background-size: contain;
-    top: 30px;
+    top: 15px;
     left: 5px;
   }
 
@@ -45,7 +45,7 @@ form {
     height: 42px;
     box-sizing: border-box;
     width: 100%;
-    background-color: transparent;
+    background-color: transparent !important;
     border: 0;
     border-bottom: 1px solid $white-col;
     padding: 1rem 0.25rem;
@@ -72,6 +72,10 @@ form {
   }
 }
 
+.basic-input:focus {
+  outline: 0;
+}
+
 .basic-input:focus:invalid+.basic-label {
   position: absolute;
   left: 0;
@@ -81,7 +85,7 @@ form {
 .basic-input:valid+.basic-label {
   position: absolute;
   left: 0;
-  transform: translateX(0) translateY(-10px);
+  transform: translateX(0) translateY(-12px);
   opacity: 1;
 }
 
@@ -92,7 +96,7 @@ form {
   }
 
   to {
-    transform: scale(1) translateX(0) translateY(-10px);
+    transform: scale(1) translateX(0) translateY(-12px);
     opacity: 1;
   }
 }

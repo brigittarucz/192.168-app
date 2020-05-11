@@ -10,6 +10,10 @@
 
 // Safari != Chrome on iPhone
 
+html {
+  width: 100vw;
+}
+
 // Overwriting mat select
 
 form {
@@ -41,8 +45,31 @@ form {
   }
 }
 
+// Scrollbar from https://codepen.io/GhostRider/pen/GHaFw
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  background-color: rgba(204, 204, 204, 0.274);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(90deg,
+      #0D4540 0%,
+      #0D4540 25%,
+      transparent 100%,
+      #0D4540 75%,
+      transparent)
+}
+
 body {
   min-height: 100vh;
+  background-color: black;
 }
 
 .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,

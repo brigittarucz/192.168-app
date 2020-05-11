@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-signup',
@@ -7,11 +8,17 @@ import { NgForm } from '@angular/forms';
 	styleUrls: [ './signup.component.scss' ]
 })
 export class SignupComponent implements OnInit {
-	constructor() {}
+	isLoading: boolean = false;
+
+	constructor(private router: Router) {}
 
 	ngOnInit(): void {}
 
 	onSubmit(form: NgForm) {
-		console.log(form);
+		this.isLoading = true;
+		setTimeout(() => {
+			this.isLoading = false;
+			this.router.navigate([ 'intro-tour' ]);
+		}, 750);
 	}
 }

@@ -40,8 +40,20 @@
   }
 }
 
-// animation: swipeLeft 2s 1;
-// background: url("../../../../assets/tour-1.png");
+@keyframes initialization {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.initialization {
+  animation: initialization 1s forwards;
+}
+
 .layout-tour-1 {
   background: url("../../../../assets/tour-1.png");
   position: absolute;

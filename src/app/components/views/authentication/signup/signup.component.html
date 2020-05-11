@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="signup-form padding-xl">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="signup-form padding-xl" autocomplete="off">
   <h4 class="text-5_regular margin-medium"> Personal Information </h4>
   <div class="personal-info">
     <div class="form-group">
@@ -55,6 +55,20 @@
   </div>
 
   <div class="form-button">
-    <button type="submit" routerLink="intro-tour" class="btn-dark">SIGN UP</button>
+    <button type="submit" class="btn-dark" [disabled]="!f.valid">SIGN UP</button>
+    <div class="lds-spinner" [ngStyle]="{'visibility': isLoading === true ? 'visible' : 'hidden'}">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 </form>
