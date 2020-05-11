@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommunityReferralComponent implements OnInit {
 	isGuestActive: boolean = false;
+	showMore: boolean = false;
 	constructor() {}
 
 	ngOnInit(): void {
 		if (localStorage.getItem('user') === 'guest') {
 			this.isGuestActive = true;
 		}
+	}
+
+	showMoreFc() {
+		this.showMore = !this.showMore;
 	}
 }

@@ -40,17 +40,20 @@
       <div class="readmore-container margin-small">
         <img src="../../../../../assets/discount10.png" alt="Discount 10">
         <div>
-          <button type="text" class="btn-dark">Show More</button>
+          <button type="text" class="btn-dark" (click)="showMoreFc()">
+            {{ showMore ? 'Show Less' : 'Show More'}}</button>
         </div>
       </div>
-      <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
-        lectus.
-      </p>
-      <img src="../../../../../assets/discount5.png" alt="Discount 5">
-      <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
-        lectus.
-      </p>
-      <img src="../../../../../assets/discount2.png" alt="Discount 2">
+      <div *ngIf="showMore">
+        <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
+          lectus.
+        </p>
+        <img src="../../../../../assets/discount5.png" alt="Discount 5">
+        <p class="text-5_regular">Integer ut sem eu ipsum aliquam semper sit amet id turpis. Curabitur feugiat neque
+          lectus.
+        </p>
+        <img src="../../../../../assets/discount2.png" alt="Discount 2">
+      </div>
     </article>
   </section>
 </ng-template>
