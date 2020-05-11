@@ -17,6 +17,8 @@ export class AuthenticationComponent implements OnInit {
 			this.isSignupActive = true;
 		}
 		localStorage.removeItem('user');
+		localStorage.removeItem('key');
+		localStorage.removeItem('user-object');
 	}
 
 	displayLoginScreen() {

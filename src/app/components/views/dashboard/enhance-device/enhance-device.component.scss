@@ -1,11 +1,12 @@
 @import "../../../../../styles/general/colors.scss";
 
-section:not(.guest__view) {
+section:not(.guest__view):not(.nodevice__view) {
   padding: 2rem;
   background-color: white;
 }
 
-.guest__view {
+.guest__view,
+.nodevice__view {
   padding: 2rem;
 }
 
@@ -20,7 +21,7 @@ section:not(.guest__view) {
     background: url("../../../../../assets/device-placeholder.png");
     height: 300px;
     width: 50%;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -50,6 +51,7 @@ section:not(.guest__view) {
     width: 45px;
     text-align: center;
     height: 20px;
+    border: 1px solid grey;
   }
 }
 

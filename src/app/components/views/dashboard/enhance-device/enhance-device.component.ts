@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnhanceDeviceComponent implements OnInit {
 	isGuestActive: boolean = false;
+	hasDevice: boolean = false;
 	constructor() {}
 
 	ngOnInit(): void {
 		if (localStorage.getItem('user') === 'guest') {
 			this.isGuestActive = true;
+		}
+		if (localStorage.getItem('user-object') !== null) {
+			let user = JSON.parse(localStorage.getItem('user-object'));
+			if (user.device) {
+				this.hasDevice = user.device;
+			}
 		}
 	}
 }

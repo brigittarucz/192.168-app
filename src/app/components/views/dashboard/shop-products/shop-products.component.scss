@@ -9,20 +9,14 @@ section {
 
   .option {
     margin: 0.5rem;
-  }
-
-  .option-active {
-    display: inline-block;
-    padding: 1rem 1.5rem;
-    background-color: $blueshade2-col;
-    border-radius: 20px;
-  }
-
-  .option-inactive {
     display: inline-block;
     padding: 1rem 1.5rem;
     background-color: $greyshade3-col;
     border-radius: 20px;
+  }
+
+  .option-active {
+    background-color: $blueshade2-col;
   }
 
 }

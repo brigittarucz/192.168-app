@@ -23,6 +23,7 @@ export class SidebarComponent implements OnInit {
 		}
 		if (localStorage.getItem('user-object') !== null) {
 			let user = JSON.parse(localStorage.getItem('user-object'));
+			console.log(user);
 			this.username = user.name;
 		}
 	}

@@ -1,21 +1,25 @@
 <section class="section__options">
-  <div class="option option-active">
-    <p class="text-5_regular"> Buy Again </p>
+  <div [ngClass]="filterClicked === 'buy-again' ? 'option option-active' : 'option'" (click)="changePreference($event)">
+    <p class="text-5_regular buy-again"> Buy Again </p>
   </div>
-  <div class="option option-inactive">
-    <p class="text-5_regular"> IQOS Devices </p>
+  <div [ngClass]="filterClicked === 'devices' ? 'option option-active' : 'option'" (click)="changePreference($event)">
+    <p class="text-5_regular devices"> IQOS Devices </p>
   </div>
-  <div class="option option-inactive">
-    <p class="text-5_regular"> HEETS </p>
+  <div [ngClass]="filterClicked === 'heets' ? 'option option-active' : 'option'" (click)="changePreference($event)">
+    <p class="text-5_regular heets"> HEETS </p>
   </div>
-  <div class="option option-inactive">
-    <p class="text-5_regular"> Accessories </p>
+  <div [ngClass]="filterClicked === 'accessories' ? 'option option-active' : 'option'"
+    (click)="changePreference($event)">
+    <p class="text-5_regular accessories"> Accessories </p>
+  </div>
+  <div [ngClass]="filterClicked === 'all' ? 'option option-active' : 'option'" (click)="changePreference($event)">
+    <p class="text-5_regular all"> All </p>
   </div>
 </section>
 
 
 <section class="section__products">
-  <article class="product-container">
+  <article class="product-container" *ngFor="let item of devicesArray">
     <img src="../../../../../assets/item-placeholder.png" alt="Item">
     <h4 class="text-4_regular"> HEETS Tobacco Flavor Collection </h4>
     <h5 class="text-5_regular"> 105.00 kr </h5>
