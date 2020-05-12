@@ -1,31 +1,22 @@
 <section class="section__view-cart">
   <h3 class="text-4_regular"> Added items to your cart </h3>
-  <article class="cart-product-container margin-medium">
-    <div class="image-container">
+  <div *ngFor="let item of products">
+    <article class="cart-product-container margin-medium" *ngIf="item.quantity !== 0">
+      <div class="image-container"
+        [ngStyle]="{'background-image': 'url(../../../../../../../assets/products/' + item.type + '/' + item.name + '.png)'}">
 
-    </div>
-    <div class="product-information">
-      <h4 class="text-4_regular"> HEETS Tobacco Flavor Collection </h4>
-      <h5 class="text-5_regular"> 105.00 kr </h5>
-      <p class="text-6_regular"> 3 packs of 20 tobacco sticks.</p>
-    </div>
-    <div class="product-control">
-      <button type="button" class="btn-light btn-light-quantity">1</button>
-    </div>
-  </article>
-  <article class="cart-product-container margin-medium">
-    <div class="image-container">
-
-    </div>
-    <div class="product-information">
-      <h4 class="text-4_regular"> HEETS Tobacco Flavor Collection </h4>
-      <h5 class="text-5_regular"> 105.00 kr </h5>
-      <p class="text-6_regular"> 3 packs of 20 tobacco sticks.</p>
-    </div>
-    <div class="product-control">
-      <button type="button" class="btn-light btn-light-quantity">1</button>
-    </div>
-  </article>
+      </div>
+      <div class="product-information">
+        <h4 class="text-4_regular"> {{item.displayName}} </h4>
+        <h5 class="text-5_regular"> {{item.price}} </h5>
+        <p class="text-6_regular"> {{item.description}}</p>
+      </div>
+      <div class="product-control">
+        <button type="button" class="btn-light btn-light-close" [ngClass]="item.name"> X</button>
+        <button type="button" class="btn-light btn-light-quantity">12</button>
+      </div>
+    </article>
+  </div>
 </section>
 
 <section class="section__price">

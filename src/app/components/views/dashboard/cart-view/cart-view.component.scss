@@ -43,10 +43,15 @@ section {
 
     .product-control {
       align-self: center;
+      width: 60px;
+      display: flex;
+      height: 120px;
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+      /* align-items: baseline; */
+      justify-content: space-between;
 
-      button {
-        width: 35px;
-      }
+
     }
 
     display: flex;

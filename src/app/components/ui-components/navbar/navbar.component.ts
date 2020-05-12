@@ -22,8 +22,8 @@ export class NavbarComponent implements OnInit {
 	];
 
 	constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-		router.events.pipe(filter((event) => event instanceof NavigationStart)).subscribe((event) => {
-			let route = event.url;
+		router.events.pipe(filter((event) => event instanceof NavigationStart)).subscribe((ev) => {
+			let route = ev.url;
 			route = route.slice(11, route.length);
 			this.checkNav(route);
 		});

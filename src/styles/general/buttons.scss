@@ -47,6 +47,8 @@
 
   &-quantity {
     padding: 0.5rem;
+    width: 45px;
+    float: right;
   }
 
   &-quantity::after {
@@ -59,6 +61,16 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center 2px;
+  }
+
+  &-close {
+    width: 20px;
+    height: 17px;
+    border-radius: 20px;
+    color: $beigeshade0-col;
+    border: 1px solid $beigeshade1-col;
+    opacity: 0.7;
+    align-self: flex-end;
   }
 
   &-more {
@@ -75,6 +87,10 @@
     width: 80px;
   }
 
+}
+
+button:focus {
+  outline: 0;
 }
 
 // Pulse animation from https://www.codesnail.com/css-pulse-animation/
@@ -98,6 +114,28 @@
 
   100% {
     box-shadow: 0 0 0 0 rgba(13, 69, 64, 0), 0 0 0 10px rgba(13, 69, 64, 0);
+  }
+}
+
+.btn-light:active {
+  animation: pulse-light 0.5s 1;
+}
+
+@keyframes pulse-light {
+  0% {
+    box-shadow: 0 0 0 0 rgba(210, 170, 157, 0.7), 0 0 0 0 rgba(210, 170, 157, 0.7);
+  }
+
+  40% {
+    box-shadow: 0 0 0 20px rgba(210, 170, 157, 0), 0 0 0 0 rgba(210, 170, 157, 0.7);
+  }
+
+  80% {
+    box-shadow: 0 0 0 20px rgba(210, 170, 157, 0), 0 0 0 10px rgba(210, 170, 157, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(210, 170, 157, 0), 0 0 0 10px rgba(210, 170, 157, 0);
   }
 }
 

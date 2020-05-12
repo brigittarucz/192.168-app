@@ -19,6 +19,7 @@ const routes: Routes = [
 			{ path: '', redirectTo: 'general', pathMatch: 'full' },
 			{ path: 'special-offers', redirectTo: 'products', pathMatch: 'full' },
 			{ path: 'customize', redirectTo: 'my-iqos', pathMatch: 'full' },
+			{ path: 'checkout', redirectTo: 'view', pathMatch: 'full' },
 			{ path: 'general', component: CommunityGeneralComponent },
 			{ path: 'referral', component: CommunityReferralComponent },
 			{ path: 'products', component: ShopProductsComponent },

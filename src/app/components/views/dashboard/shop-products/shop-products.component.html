@@ -25,6 +25,6 @@
     <h4 class="text-4_regular"> {{item.displayName}}</h4>
     <h5 class="text-5_regular"> {{item.price}}</h5>
     <p class="text-6_regular"> {{item.description}}</p>
-    <button type="button" class="btn-light">Add to cart</button>
+    <button type="button" class="btn-light" [ngClass]="[item.name]" (click)="addToCart($event)">Add to cart</button>
   </article>
 </section>

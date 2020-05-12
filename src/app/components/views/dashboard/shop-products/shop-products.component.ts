@@ -59,4 +59,14 @@ export class ShopProductsComponent implements OnInit {
 	changePreference(ev) {
 		this.filterClicked = ev.target.classList[1];
 	}
+
+	addToCart(ev) {
+		if (localStorage.getItem('products') === null) {
+			localStorage.setItem('products', ev.target.classList[1]);
+		} else {
+			let current = localStorage.getItem('products');
+			current += ',' + ev.target.classList[1];
+			localStorage.setItem('products', current);
+		}
+	}
 }
