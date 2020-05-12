@@ -62,10 +62,10 @@ export class ShopProductsComponent implements OnInit {
 
 	addToCart(ev) {
 		if (localStorage.getItem('products') === null) {
-			localStorage.setItem('products', ev.target.classList[1]);
+			localStorage.setItem('products', ev.target.classList[1] + ',');
 		} else {
 			let current = localStorage.getItem('products');
-			current += ',' + ev.target.classList[1];
+			current += ev.target.classList[1] + ',';
 			localStorage.setItem('products', current);
 		}
 	}

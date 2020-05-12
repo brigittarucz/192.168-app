@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ModalCartComponent } from 'src/app/components/ui-components/modal-cart/modal-cart.component';
 
 @Component({
 	selector: 'app-cart-view',
@@ -58,23 +59,46 @@ export class CartViewComponent implements OnInit {
 		}
 	];
 
-	cartItems;
+	subtotal: number = 0;
+	total: number = 0;
 
 	constructor(public matDialog: MatDialog) {}
 
 	ngOnInit(): void {
-		let userProductsStringToArr = localStorage.getItem('products').split(',');
-		userProductsStringToArr.forEach((str) => {
-			this.products.forEach((product) => {
-				if (str === product.name) {
-					product.quantity += 1;
-					console.log(this.products);
-				}
+		if (localStorage.getItem('products') !== null) {
+			let userProductsStringToArr = localStorage.getItem('products').split(',');
+			userProductsStringToArr.forEach((str) => {
+				this.products.forEach((product) => {
+					if (str === product.name) {
+						product.quantity += 1;
+						let price = parseInt(product.price);
+						this.subtotal += price;
+						this.total += price;
+					}
+				});
 			});
-		});
+		}
 	}
 
 	showModal(ev) {
-		console.log(ev.target);
+		const dialogConfig = new MatDialogConfig();
+		dialogConfig.disableClose = false;
+		dialogConfig.id = 'modal-cart';
+		dialogConfig.width = '80%';
+		dialogConfig.data = ev.target;
+		const modalDialog = this.matDialog.open(ModalCartComponent, dialogConfig);
+
+		modalDialog.afterClosed().subscribe((data) => {
+			if (data === 'Yes') {
+				this.products.forEach((product) => {
+					if (product.name === ev.target.classList[2]) {
+						product.quantity -= 1;
+						let productsStr = localStorage.getItem('products');
+						productsStr = productsStr.replace(product.name + ',', '');
+						localStorage.setItem('products', productsStr);
+					}
+				});
+			}
+		});
 	}
 }

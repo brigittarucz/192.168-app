@@ -25,6 +25,7 @@ import { EnhanceDeviceComponent } from './components/views/dashboard/enhance-dev
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ModalCartComponent } from './components/ui-components/modal-cart/modal-cart.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
 	overrides = <any>{
@@ -47,7 +48,8 @@ export class MyHammerConfig extends HammerGestureConfig {
 		CommunityReferralComponent,
 		ShopProductsComponent,
 		CartViewComponent,
-		EnhanceDeviceComponent
+		EnhanceDeviceComponent,
+		ModalCartComponent
 	],
 	imports: [
 		BrowserModule,

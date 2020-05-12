@@ -12,8 +12,10 @@
         <p class="text-6_regular"> {{item.description}}</p>
       </div>
       <div class="product-control">
-        <button type="button" class="btn-light btn-light-close" [ngClass]="item.name"> X</button>
-        <button type="button" class="btn-light btn-light-quantity">12</button>
+        <button type="button" class="btn-light btn-light-close" [ngClass]="[item.name, item.type]"
+          (click)="showModal($event)">
+          X</button>
+        <button type="button" class="btn-light btn-light-quantity">{{item.quantity}}</button>
       </div>
     </article>
   </div>
@@ -21,8 +23,8 @@
 
 <section class="section__price">
   <article class="section__price-container">
-    <p class="text-6_medium subtotal"> Subtotal <span class="price price-subtotal"> 105.00 kr</span></p>
-    <p class="text-6_medium total"> Total <span class="price price-total"> 105.00 kr</span></p>
+    <p class="text-6_medium subtotal"> Subtotal <span class="price price-subtotal"> {{subtotal}}.00 kr</span></p>
+    <p class="text-6_medium total"> Total <span class="price price-total"> {{total}}.00 kr</span></p>
     <button type="button" class="btn-light"> Checkout </button>
   </article>
 </section>

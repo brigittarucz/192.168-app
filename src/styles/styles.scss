@@ -85,3 +85,14 @@ body {
   background-color: white;
 
 }
+
+mat-dialog-container#modal-cart {
+  background-color: $pinegreenshade0-col;
+  border: 1px solid $pinegreenshade2-col;
+  color: $pinegreenshade2-col;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
