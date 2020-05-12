@@ -21,7 +21,6 @@ export class TourComponent implements OnInit {
 			if (ev.target.classList[1].includes('tour')) {
 				let num = ev.target.classList[1].charAt(5);
 				if (num !== '3') {
-					console.log(num);
 					this.toursSwipedRight = '0';
 					this.toursSwipedLeft = this.tours[num];
 				}
@@ -36,7 +35,6 @@ export class TourComponent implements OnInit {
 				if (num !== '1') {
 					this.toursSwipedLeft = '0';
 					this.toursSwipedRight = this.tours[num - 1];
-					console.log(this.toursSwipedRight);
 				}
 			}
 		}
@@ -44,7 +42,6 @@ export class TourComponent implements OnInit {
 
 	onSwipeUp(ev) {
 		this.toursSwipedUp = ev.target.classList[2];
-		console.log(this.toursSwipedUp);
 		this.toursSwipedLeft = '0';
 		this.toursSwipedRight = '0';
 		setTimeout(() => {

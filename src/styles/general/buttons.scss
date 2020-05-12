@@ -77,6 +77,30 @@
 
 }
 
+// Pulse animation from https://www.codesnail.com/css-pulse-animation/
+
+.btn-dark:active {
+  animation: pulse 0.5s 1;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 69, 64, 0.7), 0 0 0 0 rgba(13, 69, 64, 0.7);
+  }
+
+  40% {
+    box-shadow: 0 0 0 20px rgba(13, 69, 64, 0), 0 0 0 0 rgba(13, 69, 64, 0.7);
+  }
+
+  80% {
+    box-shadow: 0 0 0 20px rgba(13, 69, 64, 0), 0 0 0 10px rgba(13, 69, 64, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 69, 64, 0), 0 0 0 10px rgba(13, 69, 64, 0);
+  }
+}
+
 .light-select {
   color: $black-col;
   border: 1px solid $greyshade2-col;

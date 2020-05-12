@@ -51,5 +51,16 @@ export class NavbarComponent implements OnInit {
 		this.userNavigationSelected = newSelection;
 	}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		let route = this.router.url;
+		route = route.slice(11, route.length);
+		this.navigationTree.forEach((el) => {
+			el.children.forEach((child) => {
+				if (route === child) {
+					this.userNavigationSelected = child;
+					this.userNavigation = el;
+				}
+			});
+		});
+	}
 }

@@ -13,17 +13,17 @@ export class DashboardComponent implements OnInit {
 	constructor(private http: HttpClient, private router: Router) {}
 
 	ngOnInit(): void {
-		let key = localStorage.getItem('key');
-		this.http.get('https://iqos-f5c13.firebaseio.com/users/' + key + '.json').subscribe(
-			(response) => {
-				localStorage.setItem('user-object', JSON.stringify(response));
-			},
-			(error) => {
-				alert('Authentication Error');
-				localStorage.removeItem('key');
-				localStorage.removeItem('user');
-				this.router.navigate([ '/' ]);
-			}
-		);
+		// let key = localStorage.getItem('key');
+		// this.http.get('https://iqos-f5c13.firebaseio.com/users/' + key + '.json').subscribe(
+		// 	(response) => {
+		// 		localStorage.setItem('user-object', JSON.stringify(response));
+		// 	},
+		// 	(error) => {
+		// 		alert('Authentication Error');
+		// 		localStorage.removeItem('key');
+		// 		localStorage.removeItem('user');
+		// 		this.router.navigate([ '/' ]);
+		// 	}
+		// );
 	}
 }

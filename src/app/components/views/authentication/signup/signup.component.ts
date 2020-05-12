@@ -16,6 +16,7 @@ export class SignupComponent implements OnInit {
 
 	onSubmit(form: NgForm) {
 		this.isLoading = true;
+		localStorage.setItem('user', 'new-user');
 		setTimeout(() => {
 			this.isLoading = false;
 			this.router.navigate([ 'intro-tour' ]);

@@ -44,8 +44,9 @@ export class LoginComponent implements OnInit {
 						this.isLoading = false;
 						this.errorEmail = false;
 						this.authService.changeAuthStatus();
+						console.log(this.authService.isUserAuth);
 						localStorage.setItem('user', 'authenticated');
-						localStorage.setItem('key', user.id);
+						localStorage.setItem('user-object', JSON.stringify(user));
 						this.router.navigate([ 'dashboard/general' ]);
 						break;
 					}
