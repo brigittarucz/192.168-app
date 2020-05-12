@@ -17,17 +17,27 @@
         <mat-select class="mat-select" placeholder="Month" name="month">
           <mat-option value="january"> January </mat-option>
           <mat-option value="february"> February </mat-option>
+          <mat-option value="march"> March </mat-option>
+          <mat-option value="april"> April </mat-option>
+          <mat-option value="may"> May </mat-option>
+          <mat-option value="june"> June </mat-option>
+          <mat-option value="july"> July </mat-option>
+          <mat-option value="august"> August </mat-option>
+          <mat-option value="september"> September </mat-option>
+          <mat-option value="october"> October </mat-option>
+          <mat-option value="november"> November </mat-option>
+          <mat-option value="december"> December </mat-option>
         </mat-select>
         <mat-select class="mat-select" placeholder="Year" name="month">
-          <mat-option value="1920"> 1920 </mat-option>
-          <mat-option value="1921"> 1921 </mat-option>
+          <mat-option *ngFor="let year of yearsArr" value="{{year}}"> {{year}} </mat-option>
         </mat-select>
       </div>
-      <button class="btn-dark" type="submit">Confirm</button>
+      <button class="btn-dark" type="submit" (click)="setMinorStatus()">Confirm</button>
     </form>
 
     <p class="text-6_regular privacy-policy">
-      Read our privacy policy <a href="#" class="basic-link"> here </a>
+      Read our privacy policy <a href="https://www.pmi.com/privacy-notice-new" class="basic-link" target="_blank"> here
+      </a>
     </p>
   </div>
 </div>

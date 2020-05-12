@@ -11,13 +11,21 @@ export class AppComponent implements OnInit {
 	userInAppSubject: Subject<boolean>;
 	blockDeviceType: boolean = false;
 
+	minorStatusSubject: Subject<boolean>;
+
 	constructor(private authService: AuthService) {
 		this.userInAppSubject = this.authService.userAuth;
 		this.userInAppSubject.subscribe((value) => {
 			this.isUserInApp = value;
 			console.log(this.isUserInApp);
 		});
+
+		this.minorStatusSubject = this.authService.userMinor;
+		this.minorStatusSubject.subscribe((value) => {
+			this.isUserNotMinor = !value;
+		});
 	}
+
 	isUserNotMinor: boolean = false;
 	isUserInApp: boolean = true;
 
