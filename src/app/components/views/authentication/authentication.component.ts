@@ -18,6 +18,7 @@ export class AuthenticationComponent implements OnInit {
 		}
 		localStorage.removeItem('user');
 		localStorage.removeItem('user-object');
+		localStorage.removeItem('products');
 	}
 
 	displayLoginScreen() {

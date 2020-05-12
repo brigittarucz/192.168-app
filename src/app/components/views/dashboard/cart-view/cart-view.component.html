@@ -39,39 +39,41 @@
 </section>
 
 <section class="section__discount-referral">
-  <article class="section__discount-referral-container-close">
+  <article class="section__discount-referral-container-close" *ngIf="!isReferralDiscountOpen; else refDisc">
     <div class="flex-display">
       <p class="text-6_medium"> I have received a referral discount <span class="text-6_semibold ad"> NEW </span> </p>
-      <button type="button" class="btn-light btn-light-more">+</button>
+      <button type="button" class="btn-light btn-light-more" (click)="toggleReferralDiscount()">+</button>
     </div>
   </article>
-  <article class="section__discount-referral-container-open">
-    <div class="flex-display">
-      <p class="text-6_medium"> Select your discounts and click ok </p>
-      <button type="button" class="btn-light btn-light-more">-</button>
-    </div>
+  <ng-template #refDisc>
+    <article class="section__discount-referral-container-open">
+      <div class="flex-display">
+        <p class="text-6_medium"> Select your discounts and click ok </p>
+        <button type="button" class="btn-light btn-light-more" (click)="toggleReferralDiscount()">-</button>
+      </div>
 
-    <div class="discounts-container margin-large">
-      <div class="discount discount-10">
-        <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
-        <p class="text-2_bold">10%</p>
-        <button type="button" class="btn-light btn-light-quantity">2</button>
+      <div class="discounts-container margin-large">
+        <div class="discount discount-10">
+          <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+          <p class="text-2_bold">10%</p>
+          <button type="button" class="btn-light btn-light-quantity">2</button>
+        </div>
+        <div class="discount discount-5">
+          <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+          <p class="text-2_bold">5%</p>
+          <button type="button" class="btn-light btn-light-quantity">1</button>
+        </div>
+        <div class="discount discount-2 inactive">
+          <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+          <p class="text-2_bold">2%</p>
+          <button type="button" class="btn-light btn-light-quantity">2</button>
+        </div>
       </div>
-      <div class="discount discount-5">
-        <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
-        <p class="text-2_bold">5%</p>
-        <button type="button" class="btn-light btn-light-quantity">1</button>
-      </div>
-      <div class="discount discount-2 inactive">
-        <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
-        <p class="text-2_bold">2%</p>
-        <button type="button" class="btn-light btn-light-quantity">2</button>
-      </div>
-    </div>
 
-    <button type="button" class="btn-light btn-light-confirm">Ok</button>
-    <p class="text-6_semibold margin-small"> You can't add more than three! </p>
-  </article>
+      <button type="button" class="btn-light btn-light-confirm">Ok</button>
+      <p class="text-6_semibold margin-small"> You can't add more than three! </p>
+    </article>
+  </ng-template>
 
   <article class="section__discount-referral-container-open-nodiscounts">
     <div class="flex-display">
@@ -87,14 +89,16 @@
   <article class="section__manage-delivery-container-close">
     <div class="flex-display">
       <p class="text-6_medium"> Subscribe to delivery </p>
-      <button type="button" class="btn-light btn-light-more">+</button>
+      <button type="button" class="btn-light btn-light-more"
+        (click)="toggleDeliverySubscription()">{{!isDeliverySubscriptionOpen ? '+' : '-'}}</button>
     </div>
   </article>
-  <article class="section__manage-delivery-container-open">
+  <article class="section__manage-delivery-container-open"
+    [ngStyle]="{'display': isDeliverySubscriptionOpen ? 'block' : 'none'}">
     <div class="flex-display">
       <p class="text-6_medium"> Subscribe to delivery </p>
       <mat-checkbox> </mat-checkbox>
-    </div>
+    </div> <br> <br>
 
     <div class="flex-display">
       <p class="text-6_medium"> I want to subscribe to the purchase of this product. I want this delivered

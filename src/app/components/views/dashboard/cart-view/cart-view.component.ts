@@ -8,6 +8,17 @@ import { ModalCartComponent } from 'src/app/components/ui-components/modal-cart/
 	styleUrls: [ './cart-view.component.scss' ]
 })
 export class CartViewComponent implements OnInit {
+	isReferralDiscountOpen: boolean = false;
+	isDeliverySubscriptionOpen: boolean = false;
+
+	toggleReferralDiscount() {
+		this.isReferralDiscountOpen = !this.isReferralDiscountOpen;
+	}
+
+	toggleDeliverySubscription() {
+		this.isDeliverySubscriptionOpen = !this.isDeliverySubscriptionOpen;
+	}
+
 	products = [
 		{
 			name: 'iqos-3-duo_color-gold',
