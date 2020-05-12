@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { Subject } from 'rxjs';
 
@@ -7,8 +7,9 @@ import { Subject } from 'rxjs';
 	templateUrl: './app.component.html',
 	styleUrls: [ './app.component.scss' ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 	userInAppSubject: Subject<boolean>;
+	blockDeviceType: boolean = false;
 
 	constructor(private authService: AuthService) {
 		this.userInAppSubject = this.authService.userAuth;
@@ -17,6 +18,23 @@ export class AppComponent {
 			console.log(this.isUserInApp);
 		});
 	}
-	isUserNotMinor: boolean = true;
+	isUserNotMinor: boolean = false;
 	isUserInApp: boolean = true;
+
+	ngOnInit(): void {
+		if (window.innerWidth > 450) {
+			this.blockDeviceType = true;
+		} else {
+			this.blockDeviceType = false;
+		}
+	}
+
+	@HostListener('window:resize', [ '$event' ])
+	onResize(event) {
+		if (event.target.innerWidth > 450) {
+			this.blockDeviceType = true;
+		} else {
+			this.blockDeviceType = false;
+		}
+	}
 }

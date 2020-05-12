@@ -1,10 +1,18 @@
-<div *ngIf="isUserNotMinor; else userIsMinor">
-  <app-authentication *ngIf="!isUserInApp; else app"> </app-authentication>
-  <ng-template #app>
-    <router-outlet></router-outlet>
+<div *ngIf="!blockDeviceType; else block">
+  <div *ngIf="isUserNotMinor; else userIsMinor">
+    <app-authentication *ngIf="!isUserInApp; else app"> </app-authentication>
+    <ng-template #app>
+      <router-outlet></router-outlet>
+    </ng-template>
+  </div>
+
+  <ng-template #userIsMinor class="user-is-minor">
+    <app-age-check> </app-age-check>
   </ng-template>
 </div>
 
-<ng-template #userIsMinor class="user-is-minor">
-  <app-age-check> </app-age-check>
+<ng-template #block class="block">
+  <p class="text-4_regular" style="color: white; padding: 2rem;"> Nope. Not for this size... Try to go below 450px if
+    you feel like
+    checking responsiveness. :) </p>
 </ng-template>
