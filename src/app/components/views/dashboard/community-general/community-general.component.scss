@@ -5,7 +5,21 @@ section {
 }
 
 .guest__view {
-  height: 100%;
+  height: calc(100vh - 130px);
+
+  &-img {
+    outline: 1px solid white;
+    padding: 5px;
+    animation: increaseOpacity 1s forwards;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    color: $beigeshade0-col;
+  }
 }
 
 .text-5_regular {

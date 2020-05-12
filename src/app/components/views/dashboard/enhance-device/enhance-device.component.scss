@@ -8,6 +8,40 @@ section:not(.guest__view):not(.nodevice__view) {
 .guest__view,
 .nodevice__view {
   padding: 2rem;
+  height: calc(100vh - 130px);
+  position: relative;
+
+  a {
+    color: $beigeshade0-col;
+  }
+
+  img {
+    animation: increaseOpacity 1s forwards;
+  }
+}
+
+.nodevice__view {
+  &-img {
+    outline: 1px solid white;
+    padding: 5px;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.guest__view {
+  &-img {
+    outline: 1px solid white;
+    padding: 5px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+
 }
 
 .section__device-status {

@@ -1,10 +1,17 @@
 <section class="guest__view" *ngIf="isGuestActive; else authView">
-  <p class="text-5_regular"> Please login or signup to view this section.</p>
+  <div class="guest__view-img">
+    <img src="../../../../../assets/guest.jpg" width="100%" alt="Social">
+  </div>
+  <p class="text-4_medium margin-large"> Please <a routerLink="/">log in or sign up</a> to view this section.</p>
 </section>
 
 <ng-template #authView>
   <section class="nodevice__view" *ngIf="!hasDevice; else deviceView">
-    <p class="text-5_regular"> Purchase a device in order to experience the perks of your IQOS.</p>
+    <div class="nodevice__view-img">
+      <img src="../../../../../assets/purchase.jpg" width="100%" alt="Purchase device">
+    </div>
+    <p class="text-4_medium margin-large"> Purchase a device <a routerLink="/dashboard/products"> here </a> in order to
+      experience more perks of the IQOS app.</p>
   </section>
   <ng-template #deviceView>
     <section class="section__device-status">

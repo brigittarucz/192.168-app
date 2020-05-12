@@ -14,3 +14,13 @@ html {
     font-size: 55.75%;
   }
 }
+
+@keyframes increaseOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

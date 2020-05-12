@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, RouterEvent, NavigationStart } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
 	selector: 'app-navbar',
@@ -20,7 +21,13 @@ export class NavbarComponent implements OnInit {
 		{ parent: 'shopping cart', children: [ 'view', 'checkout' ] }
 	];
 
-	constructor(private router: Router) {}
+	constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+		router.events.pipe(filter((event) => event instanceof NavigationStart)).subscribe((event) => {
+			let route = event.url;
+			route = route.slice(11, route.length);
+			this.checkNav(route);
+		});
+	}
 
 	closeSidebar(clicked) {
 		this.isSidebarOpen = false;
@@ -51,16 +58,20 @@ export class NavbarComponent implements OnInit {
 		this.userNavigationSelected = newSelection;
 	}
 
-	ngOnInit(): void {
-		let route = this.router.url;
-		route = route.slice(11, route.length);
+	checkNav(toCheck) {
 		this.navigationTree.forEach((el) => {
 			el.children.forEach((child) => {
-				if (route === child) {
+				if (toCheck === child) {
 					this.userNavigationSelected = child;
 					this.userNavigation = el;
 				}
 			});
 		});
+	}
+
+	ngOnInit(): void {
+		let route = this.router.url;
+		route = route.slice(11, route.length);
+		this.checkNav(route);
 	}
 }

@@ -4,6 +4,25 @@ section {
   padding: 2rem;
 }
 
+.guest__view {
+  height: calc(100vh - 130px);
+
+  &-img {
+    outline: 1px solid white;
+    padding: 5px;
+    animation: increaseOpacity 1s forwards;
+
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    color: $beigeshade0-col;
+  }
+}
+
 .section__referral-container {
   background-image: url("../../../../../assets/bg-referral.png");
   background-size: cover;
