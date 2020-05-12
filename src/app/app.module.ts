@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalCartComponent } from './components/ui-components/modal-cart/modal-cart.component';
+import { MenuformatterPipe } from './pipes/menuformatter.pipe';
 
 export class MyHammerConfig extends HammerGestureConfig {
 	overrides = <any>{
@@ -49,7 +50,8 @@ export class MyHammerConfig extends HammerGestureConfig {
 		ShopProductsComponent,
 		CartViewComponent,
 		EnhanceDeviceComponent,
-		ModalCartComponent
+		ModalCartComponent,
+		MenuformatterPipe
 	],
 	imports: [
 		BrowserModule,

@@ -8,11 +8,11 @@
   <div class="nav__bottom">
     <p [ngClass]="{'active': userNavigationSelected === userNavigation.children[0], 'text-4_medium': true}"
       routerLink="{{userNavigation.children[0]}}" (click)="modifySelected($event)">
-      {{userNavigation.children[0] | titlecase}}
+      {{userNavigation.children[0] | menuformatter | titlecase}}
     </p>
     <p [ngClass]="{'active': userNavigationSelected === userNavigation.children[1], 'text-4_medium': true}"
       routerLink="{{userNavigation.children[1]}}" (click)="modifySelected($event)">
-      {{userNavigation.children[1] | titlecase}}
+      {{userNavigation.children[1] | menuformatter | titlecase}}
     </p>
   </div>
 </nav>

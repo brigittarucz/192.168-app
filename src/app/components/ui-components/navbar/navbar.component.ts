@@ -55,6 +55,10 @@ export class NavbarComponent implements OnInit {
 		let newSelection = ev.target.textContent;
 		newSelection = newSelection.toLowerCase();
 		newSelection = newSelection.trim();
+		if (/\s/.test(newSelection)) {
+			newSelection = newSelection.replace(' ', '-');
+			console.log(newSelection);
+		}
 		this.userNavigationSelected = newSelection;
 	}
 
