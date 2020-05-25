@@ -96,3 +96,17 @@ mat-dialog-container#modal-cart {
     display: none;
   }
 }
+
+
+mat-dialog-container#modal-shop {
+  background-color: $pinegreenshade0-col;
+  border: 1px solid $pinegreenshade2-col;
+  color: $pinegreenshade2-col;
+  overflow-y: hidden;
+  margin-top: 80vh;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}

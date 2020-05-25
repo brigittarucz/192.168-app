@@ -21,14 +21,6 @@
   </div>
 </section>
 
-<section class="section__price">
-  <article class="section__price-container">
-    <p class="text-6_medium subtotal"> Subtotal <span class="price price-subtotal"> {{subtotal}}.00 kr</span></p>
-    <p class="text-6_medium total"> Total <span class="price price-total"> {{total}}.00 kr</span></p>
-    <button type="button" class="btn-light"> Checkout </button>
-  </article>
-</section>
-
 <section class="section__discount-code">
   <article class="section__discount-code-container">
     <div class="flex-display">
@@ -39,50 +31,56 @@
 </section>
 
 <section class="section__discount-referral">
-  <article class="section__discount-referral-container-close" *ngIf="!isReferralDiscountOpen; else refDisc">
-    <div class="flex-display">
-      <p class="text-6_medium"> I have received a referral discount <span class="text-6_semibold ad"> NEW </span> </p>
-      <button type="button" class="btn-light btn-light-more" (click)="toggleReferralDiscount()">+</button>
-    </div>
-  </article>
-  <ng-template #refDisc>
-    <article class="section__discount-referral-container-open">
+
+  <div *ngIf="doesUserHaveDiscounts; else noDiscounts">
+    <article class="section__discount-referral-container-close" *ngIf="!isReferralDiscountOpen; else refDisc">
       <div class="flex-display">
-        <p class="text-6_medium"> Select your discounts and click ok </p>
-        <button type="button" class="btn-light btn-light-more" (click)="toggleReferralDiscount()">-</button>
+        <p class="text-6_medium"> I have received a referral discount <span class="text-6_semibold ad"> NEW </span> </p>
+        <button type="button" class="btn-light btn-light-more" (click)="toggleReferralDiscount()">+</button>
+      </div>
+    </article>
+    <ng-template #refDisc>
+      <article class="section__discount-referral-container-open">
+        <div class="flex-display">
+          <p class="text-6_medium"> Select your discounts and click ok </p>
+          <button type="button" class="btn-light btn-light-more" (click)="toggleReferralDiscount()">-</button>
+        </div>
+
+        <div class="discounts-container margin-large">
+          <div class="discount discount-10">
+            <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+            <p class="text-2_bold">10%</p>
+            <button type="button" class="btn-light btn-light-quantity">2</button>
+          </div>
+          <div class="discount discount-5">
+            <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+            <p class="text-2_bold">5%</p>
+            <button type="button" class="btn-light btn-light-quantity">1</button>
+          </div>
+          <div class="discount discount-2 inactive">
+            <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+            <p class="text-2_bold">2%</p>
+            <button type="button" class="btn-light btn-light-quantity">2</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-light btn-light-confirm">Ok</button>
+        <p class="text-6_semibold margin-small"> You can't add more than three! </p>
+      </article>
+    </ng-template>
+  </div>
+
+  <ng-template #noDiscounts>
+    <article class="section__discount-referral-container-open-nodiscounts">
+      <div class="flex-display">
+        <p class="text-6_medium"> You have no referral discounts yet</p>
+        <button type="button" class="btn-light btn-light-more">-</button>
       </div>
 
-      <div class="discounts-container margin-large">
-        <div class="discount discount-10">
-          <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
-          <p class="text-2_bold">10%</p>
-          <button type="button" class="btn-light btn-light-quantity">2</button>
-        </div>
-        <div class="discount discount-5">
-          <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
-          <p class="text-2_bold">5%</p>
-          <button type="button" class="btn-light btn-light-quantity">1</button>
-        </div>
-        <div class="discount discount-2 inactive">
-          <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
-          <p class="text-2_bold">2%</p>
-          <button type="button" class="btn-light btn-light-quantity">2</button>
-        </div>
-      </div>
-
-      <button type="button" class="btn-light btn-light-confirm">Ok</button>
-      <p class="text-6_semibold margin-small"> You can't add more than three! </p>
+      <button type="button" class="btn-light btn-light-referral margin-medium"> Refer a friend </button>
     </article>
   </ng-template>
 
-  <article class="section__discount-referral-container-open-nodiscounts">
-    <div class="flex-display">
-      <p class="text-6_medium"> You have no referral discounts yet</p>
-      <button type="button" class="btn-light btn-light-more">-</button>
-    </div>
-
-    <button type="button" class="btn-light btn-light-referral margin-medium"> Refer a friend </button>
-  </article>
 </section>
 
 <section class="section__manage-delivery">
@@ -107,5 +105,13 @@
         <option value="initial"> Month </option>
       </select>
     </div>
+  </article>
+</section>
+
+<section class="section__price">
+  <article class="section__price-container">
+    <p class="text-6_medium subtotal"> Subtotal <span class="price price-subtotal"> {{subtotal}}.00 kr</span></p>
+    <p class="text-6_medium total"> Total <span class="price price-total"> {{total}}.00 kr</span></p>
+    <button type="button" class="btn-light"> Checkout </button>
   </article>
 </section>

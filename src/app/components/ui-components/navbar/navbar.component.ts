@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, RouterEvent, NavigationStart } from '@angular/router';
+import { Router, ActivatedRoute, RouterEvent, NavigationStart, Event, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -22,10 +22,13 @@ export class NavbarComponent implements OnInit {
 	];
 
 	constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-		router.events.pipe(filter((event) => event instanceof NavigationStart)).subscribe((ev) => {
-			let route = ev.url;
-			route = route.slice(11, route.length);
-			this.checkNav(route);
+		// pipe(filter((event) => event instanceof NavigationStart))
+		router.events.subscribe((ev: Event) => {
+			if (ev instanceof NavigationEnd) {
+				let route = ev.url;
+				route = route.slice(11, route.length);
+				this.checkNav(route);
+			}
 		});
 	}
 

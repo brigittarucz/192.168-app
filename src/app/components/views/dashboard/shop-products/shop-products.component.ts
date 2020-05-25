@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ModalShopComponent } from 'src/app/components/ui-components/modal-shop/modal-shop.component';
 
 @Component({
 	selector: 'app-shop-products',
@@ -52,7 +54,7 @@ export class ShopProductsComponent implements OnInit {
 		}
 	];
 
-	constructor() {}
+	constructor(public matDialog: MatDialog) {}
 
 	ngOnInit(): void {}
 
@@ -68,5 +70,17 @@ export class ShopProductsComponent implements OnInit {
 			current += ev.target.classList[1] + ',';
 			localStorage.setItem('products', current);
 		}
+
+		const dialogConfig = new MatDialogConfig();
+		dialogConfig.disableClose = false;
+		dialogConfig.id = 'modal-shop';
+		dialogConfig.width = '80%';
+		dialogConfig.hasBackdrop = false;
+		dialogConfig.data = ev.target;
+		const modalDialog = this.matDialog.open(ModalShopComponent, dialogConfig);
+
+		setTimeout(() => {
+			modalDialog.close();
+		}, 2500);
 	}
 }

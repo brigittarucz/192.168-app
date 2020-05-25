@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ModalCartComponent } from 'src/app/components/ui-components/modal-cart/modal-cart.component';
+import { UrlResolver } from '@angular/compiler';
 
 @Component({
 	selector: 'app-cart-view',
@@ -10,6 +11,7 @@ import { ModalCartComponent } from 'src/app/components/ui-components/modal-cart/
 export class CartViewComponent implements OnInit {
 	isReferralDiscountOpen: boolean = false;
 	isDeliverySubscriptionOpen: boolean = false;
+	doesUserHaveDiscounts = false;
 
 	toggleReferralDiscount() {
 		this.isReferralDiscountOpen = !this.isReferralDiscountOpen;
@@ -88,6 +90,14 @@ export class CartViewComponent implements OnInit {
 					}
 				});
 			});
+		}
+
+		if (localStorage.getItem('user-object') !== null) {
+			let user = JSON.parse(localStorage.getItem('user-object'));
+			console.log(user);
+			if (user.discount2 !== 0 || user.discount5 !== 0 || user.discount10 || 0) {
+				this.doesUserHaveDiscounts = true;
+			}
 		}
 	}
 
