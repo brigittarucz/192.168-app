@@ -21,7 +21,7 @@
 <section class="section__products">
   <article class="product-container" [ngClass]="[item.type]" *ngFor="let item of products"
     [ngStyle]="{'display': filterClicked === 'all' ? 'block' : filterClicked === item.type ? 'block' : 'none'}">
-    <img src="{{ '../../../../../assets/products/' + item.type + '/' + item.name + '.png'}}" alt="Item">
+    <img src="{{ 'assets/products/' + item.type + '/' + item.name + '.png'}}" alt="Item">
     <h4 class="text-4_regular"> {{item.displayName}}</h4>
     <h5 class="text-5_regular"> {{item.price}}</h5>
     <p class="text-6_regular"> {{item.description}}</p>

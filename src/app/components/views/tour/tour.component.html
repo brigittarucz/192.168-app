@@ -3,7 +3,7 @@
     [ngStyle]="{'animation': toursSwipedLeft === tours[0] ? 'swipeLeft 0.5s forwards' : toursSwipedRight === tours[0] ? 'swipeRight 0.5s forwards' : toursSwipedUp === 'general' ? 'swipeUp 0.5s forwards' : 'none'}">
     <div class="layout-tour tour-1">
       <a routerLink="../dashboard/general" class="skip-tour">
-        <img src="../../../../assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
+        <img src="assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
         <span class="text-6_regular"> Skip Tour </span>
       </a>
       <div class="tour-information">
@@ -21,7 +21,7 @@
           discount opportunities.</p>
         <!-- routerLink="../dashboard/general" -->
         <div class="tour-seemore margin-medium general" (swipeup)="onSwipeUp($event)">
-          <img src="../../../../assets/icons/seemore-icon.png" alt="See more" width="20"> <br>
+          <img src="assets/icons/seemore-icon.png" alt="See more" width="20"> <br>
           <p class="text-6_regular">Swipe to see more</p>
         </div>
       </div>
@@ -34,7 +34,7 @@
    'transform': toursSwipedRight === tours[2] ? 'translateX(0)' : toursSwipedLeft === tours[2] ? 'translateX(0)' : 'translateX(100vw)' }">
     <div class="layout-tour tour-2">
       <a routerLink="../dashboard/general" class="skip-tour">
-        <img src="../../../../assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
+        <img src="assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
         <span class="text-6_regular"> Skip Tour </span>
       </a>
       <div class="tour-information">
@@ -51,7 +51,7 @@
           discounts
           earned.</p>
         <div class="tour-seemore margin-medium products" (swipeup)="onSwipeUp($event)">
-          <img src="../../../../assets/icons/seemore-icon.png" alt="See more" width="20"> <br>
+          <img src="assets/icons/seemore-icon.png" alt="See more" width="20"> <br>
           <p class="text-6_regular">Swipe to see more</p>
         </div>
       </div>
@@ -62,7 +62,7 @@
     [ngStyle]="{'animation': toursSwipedLeft === tours[2] ? 'swipeLeft 0.5s forwards' : toursSwipedRight === tours[2] ? 'swipeRight 0.5s forwards' :  toursSwipedUp === 'my-iqos' ? 'swipeUp 0.5s forwards' : 'none'}">
     <div class="layout-tour tour-3">
       <a routerLink="../dashboard/general" class="skip-tour">
-        <img src="../../../../assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
+        <img src="assets/icons/dashboard-icon.png" width="25" alt="Dashboard">
         <span class="text-6_regular"> Skip Tour </span>
       </a>
       <div class="tour-information">
@@ -79,7 +79,7 @@
           more.
         </p>
         <div class="tour-seemore margin-medium my-iqos" (swipeup)="onSwipeUp($event)">
-          <img src="../../../../assets/icons/seemore-icon.png" alt="See more" width="20"> <br>
+          <img src="assets/icons/seemore-icon.png" alt="See more" width="20"> <br>
           <p class="text-6_regular">Swipe to see more</p>
         </div>
       </div>

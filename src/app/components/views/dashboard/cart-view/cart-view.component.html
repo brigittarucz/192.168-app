@@ -3,7 +3,7 @@
   <div *ngFor="let item of products">
     <article class="cart-product-container margin-medium" *ngIf="item.quantity !== 0">
       <div class="image-container"
-        [ngStyle]="{'background-image': 'url(../../../../../../../assets/products/' + item.type + '/' + item.name + '.png)'}">
+        [ngStyle]="{'background-image': 'url(assets/products/' + item.type + '/' + item.name + '.png)'}">
 
       </div>
       <div class="product-information">
@@ -48,17 +48,17 @@
 
         <div class="discounts-container margin-large">
           <div class="discount discount-10">
-            <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+            <img src="assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
             <p class="text-2_bold">10%</p>
             <button type="button" class="btn-light btn-light-quantity">2</button>
           </div>
           <div class="discount discount-5">
-            <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+            <img src="assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
             <p class="text-2_bold">5%</p>
             <button type="button" class="btn-light btn-light-quantity">1</button>
           </div>
           <div class="discount discount-2 inactive">
-            <img src="../../../../../assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
+            <img src="assets/icons/cardselect-icon.png" class="thick-icon" alt="Thick" width="25">
             <p class="text-2_bold">2%</p>
             <button type="button" class="btn-light btn-light-quantity">2</button>
           </div>

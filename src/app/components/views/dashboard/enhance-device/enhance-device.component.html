@@ -1,6 +1,6 @@
 <section class="guest__view" *ngIf="isGuestActive; else authView">
   <div class="guest__view-img">
-    <img src="../../../../../assets/guest.jpg" width="100%" alt="Social">
+    <img src="assets/guest.jpg" width="100%" alt="Social">
   </div>
   <p class="text-4_medium margin-large"> Please <a routerLink="/">log in or sign up</a> to view this section.</p>
 </section>
@@ -8,7 +8,7 @@
 <ng-template #authView>
   <section class="nodevice__view" *ngIf="!hasDevice; else deviceView">
     <div class="nodevice__view-img">
-      <img src="../../../../../assets/purchase.jpg" width="100%" alt="Purchase device">
+      <img src="assets/purchase.jpg" width="100%" alt="Purchase device">
     </div>
     <p class="text-4_medium margin-large"> Purchase a device <a routerLink="/dashboard/products"> here </a> in order to
       experience more perks of the IQOS app.</p>
@@ -17,7 +17,7 @@
     <section class="section__device-status">
       <article class="section__device-status-container">
         <div class="device-status-img"
-          [ngStyle]="{'background-image': 'url(../../../../../assets/products/devices/' + hasDevice + '.png)'}">
+          [ngStyle]="{'background-image': 'url(assets/products/devices/' + hasDevice + '.png)'}">
 
         </div>
         <div class="device-status-data">
